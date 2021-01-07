@@ -43,7 +43,7 @@ module XeroRuby
     end
 
     def authorization_url
-      url = "#{@config.login_url}?response_type=code&client_id=#{@client_id}&redirect_uri=#{@redirect_uri}&scope=#{@scopes}"
+      url = "#{@config.login_url}?response_type=code&client_id=#{@client_id}&redirect_uri=#{@redirect_uri}&scope=#{@scopes}&state=#{@state}"
       return url
     end
 
@@ -76,7 +76,7 @@ module XeroRuby
       @config.base_url = @config.payroll_nz_url
       XeroRuby::PayrollNzApi.new(self)
     end
-    
+
     def payroll_uk_api
       @config.base_url = @config.payroll_uk_url
       XeroRuby::PayrollUkApi.new(self)
@@ -133,7 +133,7 @@ module XeroRuby
     # Connection heplers
     def connections
       response = Faraday.get('https://api.xero.com/connections') do |req|
-        req.headers['Authorization'] = "Bearer #{access_token}" 
+        req.headers['Authorization'] = "Bearer #{access_token}"
         req.headers['Content-Type'] = 'application/json'
       end
       body = JSON.parse(response.body)
@@ -318,7 +318,7 @@ module XeroRuby
         else
           raise e
         end
-      end 
+      end
 
       convert_to_type(data, return_type, api_client)
     end
@@ -584,7 +584,7 @@ module XeroRuby
           end
         when Range
           if v.first.is_a?(DateTime) || v.first.is_a?(Date) || v.first.is_a?(Time)
-            "#{camelize_key(k)} >= DateTime(#{v.first.strftime("%Y,%m,%d")}) AND #{camelize_key(k)} <= DateTime(#{v.last.strftime("%Y,%m,%d")})" 
+            "#{camelize_key(k)} >= DateTime(#{v.first.strftime("%Y,%m,%d")}) AND #{camelize_key(k)} <= DateTime(#{v.last.strftime("%Y,%m,%d")})"
           else
             "#{camelize_key(k)} >= #{v.first} AND #{camelize_key(k)} <= #{v.last}"
           end
