@@ -35,6 +35,7 @@ module XeroRuby
       @redirect_uri = credentials[:redirect_uri]
       @scopes = credentials[:scopes]
       @config = config
+      @state = credentials[:state]
       @user_agent = "xero-ruby-#{VERSION}"
       @default_headers = {
         'Content-Type' => 'application/json',
