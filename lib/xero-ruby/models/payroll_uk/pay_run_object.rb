@@ -19,13 +19,13 @@ module XeroRuby::PayrollUk
   class PayRunObject
 
     attr_accessor :pagination
-    
+
 
     attr_accessor :problem
-    
+
 
     attr_accessor :pay_run
-    
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -221,8 +221,9 @@ module XeroRuby::PayrollUk
 
     # customized data_parser
     def parse_date(datestring)
-      seconds_since_epoch = datestring.scan(/[0-9]+/)[0].to_i / 1000.0
-      return Time.at(seconds_since_epoch).strftime('%Y-%m-%dT%l:%M:%S%z').to_s
+      # seconds_since_epoch = datestring.scan(/[0-9]+/)[0].to_i / 1000.0
+      # return Time.at(seconds_since_epoch).strftime('%Y-%m-%dT%l:%M:%S%z').to_s
+      DateTime.parse(datestring).strftime('%Y-%m-%dT%l:%M:%S%z')
     end
   end
 end

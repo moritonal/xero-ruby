@@ -19,91 +19,91 @@ module XeroRuby::PayrollUk
   class Payslip
     # The Xero identifier for a Payslip
     attr_accessor :pay_slip_id
-    
+
     # The Xero identifier for payroll employee
     attr_accessor :employee_id
-    
+
     # The Xero identifier for the associated payrun
     attr_accessor :pay_run_id
-    
+
     # The date payslip was last updated
     attr_accessor :last_edited
-    
+
     # Employee first name
     attr_accessor :first_name
-    
+
     # Employee last name
     attr_accessor :last_name
-    
+
     # Total earnings before any deductions. Same as gross earnings for UK.
     attr_accessor :total_earnings
-    
+
     # Total earnings before any deductions. Same as total earnings for UK.
     attr_accessor :gross_earnings
-    
+
     # The employee net pay
     attr_accessor :total_pay
-    
+
     # The employer's tax obligation
     attr_accessor :total_employer_taxes
-    
+
     # The part of an employee's earnings that is deducted for tax purposes
     attr_accessor :total_employee_taxes
-    
+
     # Total amount subtracted from an employee's earnings to reach total pay
     attr_accessor :total_deductions
-    
+
     # Total reimbursements are nontaxable payments to an employee used to repay out-of-pocket expenses when the person incurs those expenses through employment
     attr_accessor :total_reimbursements
-    
+
     # Total amounts required by law to subtract from the employee's earnings
     attr_accessor :total_court_orders
-    
+
     # Benefits (also called fringe benefits, perquisites or perks) are various non-earnings compensations provided to employees in addition to their normal earnings or salaries
     attr_accessor :total_benefits
-    
+
     # BACS Service User Number
     attr_accessor :bacs_hash
-    
+
     # The payment method code
     attr_accessor :payment_method
     CHEQUE = "Cheque".freeze
     ELECTRONICALLY = "Electronically".freeze
     MANUAL = "Manual".freeze
-    
+
 
     attr_accessor :earnings_lines
-    
+
 
     attr_accessor :leave_earnings_lines
-    
+
 
     attr_accessor :timesheet_earnings_lines
-    
+
 
     attr_accessor :deduction_lines
-    
+
 
     attr_accessor :reimbursement_lines
-    
+
 
     attr_accessor :leave_accrual_lines
-    
+
 
     attr_accessor :benefit_lines
-    
+
 
     attr_accessor :payment_lines
-    
+
 
     attr_accessor :employee_tax_lines
-    
+
 
     attr_accessor :employer_tax_lines
-    
+
 
     attr_accessor :court_order_lines
-    
+
     class EnumAttributeValidator
       attr_reader :datatype
       attr_reader :allowable_values
@@ -530,8 +530,9 @@ module XeroRuby::PayrollUk
 
     # customized data_parser
     def parse_date(datestring)
-      seconds_since_epoch = datestring.scan(/[0-9]+/)[0].to_i / 1000.0
-      return Time.at(seconds_since_epoch).strftime('%Y-%m-%dT%l:%M:%S%z').to_s
+      # seconds_since_epoch = datestring.scan(/[0-9]+/)[0].to_i / 1000.0
+      # return Time.at(seconds_since_epoch).strftime('%Y-%m-%dT%l:%M:%S%z').to_s
+      DateTime.parse(datestring).strftime('%Y-%m-%dT%l:%M:%S%z')
     end
   end
 end
