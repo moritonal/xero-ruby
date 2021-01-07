@@ -19,36 +19,36 @@ module XeroRuby::PayrollUk
   class PayRun
     # Xero unique identifier for the pay run
     attr_accessor :pay_run_id
-    
+
     # Xero unique identifier for the payroll calendar
     attr_accessor :payroll_calendar_id
-    
+
     # Period start date of the payroll calendar
     attr_accessor :period_start_date
-    
+
     # Period end date of the payroll calendar
     attr_accessor :period_end_date
-    
+
     # Payment date of the pay run
     attr_accessor :payment_date
-    
+
     # Total cost of the pay run
     attr_accessor :total_cost
-    
+
     # Total pay of the pay run
     attr_accessor :total_pay
-    
+
     # Pay run status
     attr_accessor :pay_run_status
     DRAFT = "Draft".freeze
     POSTED = "Posted".freeze
-    
+
     # Pay run type
     attr_accessor :pay_run_type
     SCHEDULED = "Scheduled".freeze
     UNSCHEDULED = "Unscheduled".freeze
     EARLIER_YEAR_UPDATE = "EarlierYearUpdate".freeze
-    
+
     # Calendar type of the pay run
     attr_accessor :calendar_type
     WEEKLY = "Weekly".freeze
@@ -57,13 +57,13 @@ module XeroRuby::PayrollUk
     MONTHLY = "Monthly".freeze
     ANNUAL = "Annual".freeze
     QUARTERLY = "Quarterly".freeze
-    
+
     # Posted date time of the pay run
     attr_accessor :posted_date_time
-    
+
 
     attr_accessor :pay_slips
-    
+
     class EnumAttributeValidator
       attr_reader :datatype
       attr_reader :allowable_values
@@ -382,8 +382,9 @@ module XeroRuby::PayrollUk
 
     # customized data_parser
     def parse_date(datestring)
-      seconds_since_epoch = datestring.scan(/[0-9]+/)[0].to_i / 1000.0
-      return Time.at(seconds_since_epoch).strftime('%Y-%m-%dT%l:%M:%S%z').to_s
+      # seconds_since_epoch = datestring.scan(/[0-9]+/)[0].to_i / 1000.0
+      # return Time.at(seconds_since_epoch).strftime('%Y-%m-%dT%l:%M:%S%z').to_s
+      DateTime.parse(datestring).strftime('%Y-%m-%dT%l:%M:%S%z')
     end
   end
 end
