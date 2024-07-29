@@ -4,30 +4,32 @@ All URIs are relative to *https://api.xero.com/files.xro/1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_file_association**](FilesApi.md#create_file_association) | **POST** /Files/{FileId}/Associations | create a new association
-[**create_folder**](FilesApi.md#create_folder) | **POST** /Folders | create a new folder
-[**delete_file**](FilesApi.md#delete_file) | **DELETE** /Files/{FileId} | delete a file
-[**delete_file_association**](FilesApi.md#delete_file_association) | **DELETE** /Files/{FileId}/Associations/{ObjectId} | create a new association
-[**delete_folder**](FilesApi.md#delete_folder) | **DELETE** /Folders/{FolderId} | delete a folder
-[**get_associations_by_object**](FilesApi.md#get_associations_by_object) | **GET** /Associations/{ObjectId} | searches files
-[**get_file**](FilesApi.md#get_file) | **GET** /Files/{FileId} | searches for file by unique id
-[**get_file_associations**](FilesApi.md#get_file_associations) | **GET** /Files/{FileId}/Associations | searches files
-[**get_file_content**](FilesApi.md#get_file_content) | **GET** /Files/{FileId}/Content | searches files to retrieve the data
-[**get_files**](FilesApi.md#get_files) | **GET** /Files | searches files
-[**get_folder**](FilesApi.md#get_folder) | **GET** /Folders/{FolderId} | searches specific folder by id
-[**get_folders**](FilesApi.md#get_folders) | **GET** /Folders | searches folder
-[**get_inbox**](FilesApi.md#get_inbox) | **GET** /Inbox | searches inbox folder
+[**create_file_association**](FilesApi.md#create_file_association) | **POST** /Files/{FileId}/Associations | Creates a new file association
+[**create_folder**](FilesApi.md#create_folder) | **POST** /Folders | Creates a new folder
+[**delete_file**](FilesApi.md#delete_file) | **DELETE** /Files/{FileId} | Deletes a specific file
+[**delete_file_association**](FilesApi.md#delete_file_association) | **DELETE** /Files/{FileId}/Associations/{ObjectId} | Deletes an existing file association
+[**delete_folder**](FilesApi.md#delete_folder) | **DELETE** /Folders/{FolderId} | Deletes a folder
+[**get_associations_by_object**](FilesApi.md#get_associations_by_object) | **GET** /Associations/{ObjectId} | Retrieves an association object using a unique object ID
+[**get_associations_count**](FilesApi.md#get_associations_count) | **GET** /Associations/Count | Retrieves a count of associations for a list of objects.
+[**get_file**](FilesApi.md#get_file) | **GET** /Files/{FileId} | Retrieves a file by a unique file ID
+[**get_file_associations**](FilesApi.md#get_file_associations) | **GET** /Files/{FileId}/Associations | Retrieves a specific file associations
+[**get_file_content**](FilesApi.md#get_file_content) | **GET** /Files/{FileId}/Content | Retrieves the content of a specific file
+[**get_files**](FilesApi.md#get_files) | **GET** /Files | Retrieves files
+[**get_folder**](FilesApi.md#get_folder) | **GET** /Folders/{FolderId} | Retrieves specific folder by using a unique folder ID
+[**get_folders**](FilesApi.md#get_folders) | **GET** /Folders | Retrieves folders
+[**get_inbox**](FilesApi.md#get_inbox) | **GET** /Inbox | Retrieves inbox folder
 [**update_file**](FilesApi.md#update_file) | **PUT** /Files/{FileId} | Update a file
-[**update_folder**](FilesApi.md#update_folder) | **PUT** /Folders/{FolderId} | update folder
-[**upload_file**](FilesApi.md#upload_file) | **POST** /Files | upload an File
+[**update_folder**](FilesApi.md#update_folder) | **PUT** /Folders/{FolderId} | Updates an existing folder
+[**upload_file**](FilesApi.md#upload_file) | **POST** /Files | Uploads a File to the inbox
+[**upload_file_to_folder**](FilesApi.md#upload_file_to_folder) | **POST** /Files/{FolderId} | Uploads a File to a specific folder
 
 
 
 ## create_file_association
 
-> Association create_file_association(xero_tenant_id, file_id, opts)
+> Association create_file_association(xero_tenant_id, file_id, association, opts)
 
-create a new association
+Creates a new file association
 
 By passing in the appropriate options, you can create a new folder
 
@@ -50,7 +52,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -58,13 +60,14 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
 file_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | File id for single object
+association = { "ObjectId": "1270bf7c-5d18-473a-9231-1e36c4bd33ed", "ObjectGroup": "Contact", "ObjectType": "Business" } # Association | 
 opts = {
-  association: XeroRuby::Files::Association.new # Association | 
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
 }
 
 begin
-  #create a new association
-  result = api_instance.create_file_association(xero_tenant_id, file_id, opts)
+  #Creates a new file association
+  result = api_instance.create_file_association(xero_tenant_id, file_id, association, opts)
   p result
 rescue XeroRuby::Files::ApiError => e
   puts "Exception when calling FilesApi->create_file_association: #{e}"
@@ -78,7 +81,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **file_id** | [**String**](.md)| File id for single object | 
- **association** | [**Association**](Association.md)|  | [optional] 
+ **association** | [**Association**](Association.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -96,9 +100,9 @@ Name | Type | Description  | Notes
 
 ## create_folder
 
-> Folder create_folder(xero_tenant_id, opts)
+> Folder create_folder(xero_tenant_id, folder, opts)
 
-create a new folder
+Creates a new folder
 
 By passing in the appropriate properties, you can create a new folder
 
@@ -121,20 +125,21 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
 
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
+folder = { "Name": "My Docs" } # Folder | 
 opts = {
-  folder: XeroRuby::Files::Folder.new # Folder | 
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
 }
 
 begin
-  #create a new folder
-  result = api_instance.create_folder(xero_tenant_id, opts)
+  #Creates a new folder
+  result = api_instance.create_folder(xero_tenant_id, folder, opts)
   p result
 rescue XeroRuby::Files::ApiError => e
   puts "Exception when calling FilesApi->create_folder: #{e}"
@@ -147,7 +152,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
- **folder** | [**Folder**](Folder.md)|  | [optional] 
+ **folder** | [**Folder**](Folder.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -165,9 +171,9 @@ Name | Type | Description  | Notes
 
 ## delete_file
 
-> FileResponse204 delete_file(xero_tenant_id, file_id)
+> delete_file(xero_tenant_id, file_id)
 
-delete a file
+Deletes a specific file
 
 Delete a specific file
 
@@ -190,7 +196,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -199,9 +205,8 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
 file_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | File id for single object
 begin
-  #delete a file
-  result = api_instance.delete_file(xero_tenant_id, file_id)
-  p result
+  #Deletes a specific file
+  api_instance.delete_file(xero_tenant_id, file_id)
 rescue XeroRuby::Files::ApiError => e
   puts "Exception when calling FilesApi->delete_file: #{e}"
 end
@@ -217,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FileResponse204**](FileResponse204.md)
+nil (empty response body)
 
 ### Authorization
 
@@ -226,14 +231,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## delete_file_association
 
-> FileResponse204 delete_file_association(xero_tenant_id, file_id, object_id)
+> delete_file_association(xero_tenant_id, file_id, object_id)
 
-create a new association
+Deletes an existing file association
 
 By passing in the appropriate options, you can create a new folder
 
@@ -256,7 +261,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -266,9 +271,8 @@ xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
 file_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | File id for single object
 object_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Object id for single object
 begin
-  #create a new association
-  result = api_instance.delete_file_association(xero_tenant_id, file_id, object_id)
-  p result
+  #Deletes an existing file association
+  api_instance.delete_file_association(xero_tenant_id, file_id, object_id)
 rescue XeroRuby::Files::ApiError => e
   puts "Exception when calling FilesApi->delete_file_association: #{e}"
 end
@@ -285,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FileResponse204**](FileResponse204.md)
+nil (empty response body)
 
 ### Authorization
 
@@ -294,14 +298,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## delete_folder
 
-> FileResponse204 delete_folder(xero_tenant_id, folder_id)
+> delete_folder(xero_tenant_id, folder_id)
 
-delete a folder
+Deletes a folder
 
 By passing in the appropriate ID, you can delete a folder
 
@@ -324,7 +328,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -333,9 +337,8 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
 folder_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Folder id for single object
 begin
-  #delete a folder
-  result = api_instance.delete_folder(xero_tenant_id, folder_id)
-  p result
+  #Deletes a folder
+  api_instance.delete_folder(xero_tenant_id, folder_id)
 rescue XeroRuby::Files::ApiError => e
   puts "Exception when calling FilesApi->delete_folder: #{e}"
 end
@@ -351,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FileResponse204**](FileResponse204.md)
+nil (empty response body)
 
 ### Authorization
 
@@ -360,16 +363,16 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
 
 ## get_associations_by_object
 
-> Array&lt;Association&gt; get_associations_by_object(xero_tenant_id, object_id)
+> Array&lt;Association&gt; get_associations_by_object(xero_tenant_id, object_id, opts)
 
-searches files
+Retrieves an association object using a unique object ID
 
-By passing in the appropriate options,
+By passing in the appropriate options, you can retrieve an association
 
 ### Example
 
@@ -390,7 +393,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -398,9 +401,19 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
 object_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Object id for single object
+opts = {
+  pagesize: 50, # Integer | pass an optional page size value
+
+  page: 2, # Integer | number of records to skip for pagination
+
+  sort: 'Associations/{ObjectId}?sort=CreatedDateUtc', # String | values to sort by
+
+  direction: 'Associations/{ObjectId}?sort=CreatedDateUtc&direction=DESC' # String | direction to sort by
+}
+
 begin
-  #searches files
-  result = api_instance.get_associations_by_object(xero_tenant_id, object_id)
+  #Retrieves an association object using a unique object ID
+  result = api_instance.get_associations_by_object(xero_tenant_id, object_id, opts)
   p result
 rescue XeroRuby::Files::ApiError => e
   puts "Exception when calling FilesApi->get_associations_by_object: #{e}"
@@ -414,6 +427,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **object_id** | [**String**](.md)| Object id for single object | 
+ **pagesize** | **Integer**| pass an optional page size value | [optional] 
+ **page** | **Integer**| number of records to skip for pagination | [optional] 
+ **sort** | **String**| values to sort by | [optional] 
+ **direction** | **String**| direction to sort by | [optional] 
 
 ### Return type
 
@@ -429,11 +446,13 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## get_file
+## get_associations_count
 
-> FileObject get_file(xero_tenant_id, file_id)
+> Object get_associations_count(xero_tenant_id, object_ids)
 
-searches for file by unique id
+Retrieves a count of associations for a list of objects.
+
+By passing in the appropriate options, you can retrieve the association count for objects
 
 ### Example
 
@@ -454,7 +473,71 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
+
+api_instance = xero_client.<api_set>
+
+
+
+xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
+object_ids = ['object_ids_example'] # Array<String> | A comma-separated list of object ids
+begin
+  #Retrieves a count of associations for a list of objects.
+  result = api_instance.get_associations_count(xero_tenant_id, object_ids)
+  p result
+rescue XeroRuby::Files::ApiError => e
+  puts "Exception when calling FilesApi->get_associations_count: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xero_tenant_id** | **String**| Xero identifier for Tenant | 
+ **object_ids** | [**Array&lt;String&gt;**](String.md)| A comma-separated list of object ids | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## get_file
+
+> FileObject get_file(xero_tenant_id, file_id)
+
+Retrieves a file by a unique file ID
+
+### Example
+
+```ruby
+# load the gem
+require 'xero-ruby'
+
+creds = {
+  client_id: ENV['CLIENT_ID'],
+  client_secret: ENV['CLIENT_SECRET'],
+  redirect_uri: ENV['REDIRECT_URI'],
+  scopes: ENV['SCOPES']
+}
+xero_client = XeroRuby::ApiClient.new(credentials: creds)
+
+token_set = fetch_valid_token_set(user) # example
+
+xero_client.refresh_token_set(token_set)
+
+# You need to namespace your api method call to one of the following api sets
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -463,7 +546,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
 file_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | File id for single object
 begin
-  #searches for file by unique id
+  #Retrieves a file by a unique file ID
   result = api_instance.get_file(xero_tenant_id, file_id)
   p result
 rescue XeroRuby::Files::ApiError => e
@@ -497,7 +580,7 @@ Name | Type | Description  | Notes
 
 > Array&lt;Association&gt; get_file_associations(xero_tenant_id, file_id)
 
-searches files
+Retrieves a specific file associations
 
 By passing in the appropriate options,  
 
@@ -520,7 +603,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -529,7 +612,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
 file_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | File id for single object
 begin
-  #searches files
+  #Retrieves a specific file associations
   result = api_instance.get_file_associations(xero_tenant_id, file_id)
   p result
 rescue XeroRuby::Files::ApiError => e
@@ -563,7 +646,7 @@ Name | Type | Description  | Notes
 
 > File get_file_content(xero_tenant_id, file_id)
 
-searches files to retrieve the data
+Retrieves the content of a specific file
 
 By passing in the appropriate options, retrieve data for specific file
 
@@ -586,7 +669,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -595,7 +678,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
 file_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | File id for single object
 begin
-  #searches files to retrieve the data
+  #Retrieves the content of a specific file
   result = api_instance.get_file_content(xero_tenant_id, file_id)
   p result
 rescue XeroRuby::Files::ApiError => e
@@ -629,7 +712,7 @@ Name | Type | Description  | Notes
 
 > Files get_files(xero_tenant_id, opts)
 
-searches files
+Retrieves files
 
 ### Example
 
@@ -650,7 +733,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -666,7 +749,7 @@ opts = {
 }
 
 begin
-  #searches files
+  #Retrieves files
   result = api_instance.get_files(xero_tenant_id, opts)
   p result
 rescue XeroRuby::Files::ApiError => e
@@ -702,7 +785,7 @@ Name | Type | Description  | Notes
 
 > Folder get_folder(xero_tenant_id, folder_id)
 
-searches specific folder by id
+Retrieves specific folder by using a unique folder ID
 
 By passing in the appropriate ID, you can search for specific folder
 
@@ -725,7 +808,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -734,7 +817,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
 folder_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Folder id for single object
 begin
-  #searches specific folder by id
+  #Retrieves specific folder by using a unique folder ID
   result = api_instance.get_folder(xero_tenant_id, folder_id)
   p result
 rescue XeroRuby::Files::ApiError => e
@@ -768,7 +851,7 @@ Name | Type | Description  | Notes
 
 > Array&lt;Folder&gt; get_folders(xero_tenant_id, opts)
 
-searches folder
+Retrieves folders
 
 By passing in the appropriate options, you can search for available folders
 
@@ -791,7 +874,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -803,7 +886,7 @@ opts = {
 }
 
 begin
-  #searches folder
+  #Retrieves folders
   result = api_instance.get_folders(xero_tenant_id, opts)
   p result
 rescue XeroRuby::Files::ApiError => e
@@ -837,7 +920,7 @@ Name | Type | Description  | Notes
 
 > Folder get_inbox(xero_tenant_id)
 
-searches inbox folder
+Retrieves inbox folder
 
 Search for the user inbox
 
@@ -860,7 +943,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -868,7 +951,7 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
 begin
-  #searches inbox folder
+  #Retrieves inbox folder
   result = api_instance.get_inbox(xero_tenant_id)
   p result
 rescue XeroRuby::Files::ApiError => e
@@ -899,11 +982,11 @@ Name | Type | Description  | Notes
 
 ## update_file
 
-> FileObject update_file(xero_tenant_id, file_id, opts)
+> FileObject update_file(xero_tenant_id, file_id, file_object, opts)
 
 Update a file
 
-Update properties on a single file
+Updates file properties of a single file
 
 ### Example
 
@@ -924,7 +1007,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -932,13 +1015,14 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
 file_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | File id for single object
+file_object = { "FolderId": "bf924975-7097-46f2-a143-1ecfbab3c8c3" } # FileObject | 
 opts = {
-  file_object: XeroRuby::Files::FileObject.new # FileObject | 
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
 }
 
 begin
   #Update a file
-  result = api_instance.update_file(xero_tenant_id, file_id, opts)
+  result = api_instance.update_file(xero_tenant_id, file_id, file_object, opts)
   p result
 rescue XeroRuby::Files::ApiError => e
   puts "Exception when calling FilesApi->update_file: #{e}"
@@ -952,7 +1036,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **file_id** | [**String**](.md)| File id for single object | 
- **file_object** | [**FileObject**](FileObject.md)|  | [optional] 
+ **file_object** | [**FileObject**](FileObject.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -970,9 +1055,9 @@ Name | Type | Description  | Notes
 
 ## update_folder
 
-> Folder update_folder(xero_tenant_id, folder_id, folder)
+> Folder update_folder(xero_tenant_id, folder_id, folder, opts)
 
-update folder
+Updates an existing folder
 
 By passing in the appropriate ID and properties, you can update a folder
 
@@ -995,7 +1080,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1003,10 +1088,14 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
 folder_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Folder id for single object
-folder = XeroRuby::Files::Folder.new # Folder | 
+folder = { "Name": "Your Docs" } # Folder | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #update folder
-  result = api_instance.update_folder(xero_tenant_id, folder_id, folder)
+  #Updates an existing folder
+  result = api_instance.update_folder(xero_tenant_id, folder_id, folder, opts)
   p result
 rescue XeroRuby::Files::ApiError => e
   puts "Exception when calling FilesApi->update_folder: #{e}"
@@ -1021,6 +1110,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **folder_id** | [**String**](.md)| Folder id for single object | 
  **folder** | [**Folder**](Folder.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -1038,9 +1128,9 @@ Name | Type | Description  | Notes
 
 ## upload_file
 
-> FileObject upload_file(xero_tenant_id, opts)
+> FileObject upload_file(xero_tenant_id, body, name, filename, opts)
 
-upload an File
+Uploads a File to the inbox
 
 ### Example
 
@@ -1061,28 +1151,25 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
 
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
+body = 'body_example' # String | 
+name = 'name_example' # String | exact name of the file you are uploading
+filename = 'filename_example' # String | 
 opts = {
-  folder_id: '4ff1e5cc-9835-40d5-bb18-09fdb118db9c', # String | pass an optional folder id to save file to specific folder
-
-  body: 'body_example', # String | 
-
-  name: 'name_example', # String | exact name of the file you are uploading
-
-  filename: 'filename_example', # String | 
+  idempotency_key: 'KEY_VALUE', # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
 
   mime_type: 'mime_type_example' # String | 
 }
 
 begin
-  #upload an File
-  result = api_instance.upload_file(xero_tenant_id, opts)
+  #Uploads a File to the inbox
+  result = api_instance.upload_file(xero_tenant_id, body, name, filename, opts)
   p result
 rescue XeroRuby::Files::ApiError => e
   puts "Exception when calling FilesApi->upload_file: #{e}"
@@ -1095,10 +1182,88 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
- **folder_id** | [**String**](.md)| pass an optional folder id to save file to specific folder | [optional] 
- **body** | **String**|  | [optional] 
- **name** | **String**| exact name of the file you are uploading | [optional] 
- **filename** | **String**|  | [optional] 
+ **body** | **String**|  | 
+ **name** | **String**| exact name of the file you are uploading | 
+ **filename** | **String**|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
+ **mime_type** | **String**|  | [optional] 
+
+### Return type
+
+[**FileObject**](FileObject.md)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json
+
+
+## upload_file_to_folder
+
+> FileObject upload_file_to_folder(xero_tenant_id, folder_id, body, name, filename, opts)
+
+Uploads a File to a specific folder
+
+### Example
+
+```ruby
+# load the gem
+require 'xero-ruby'
+
+creds = {
+  client_id: ENV['CLIENT_ID'],
+  client_secret: ENV['CLIENT_SECRET'],
+  redirect_uri: ENV['REDIRECT_URI'],
+  scopes: ENV['SCOPES']
+}
+xero_client = XeroRuby::ApiClient.new(credentials: creds)
+
+token_set = fetch_valid_token_set(user) # example
+
+xero_client.refresh_token_set(token_set)
+
+# You need to namespace your api method call to one of the following api sets
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
+
+api_instance = xero_client.<api_set>
+
+
+
+xero_tenant_id = 'YOUR_XERO_TENANT_ID' # String | Xero identifier for Tenant
+folder_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | pass required folder id to save file to specific folder
+body = 'body_example' # String | 
+name = 'name_example' # String | exact name of the file you are uploading
+filename = 'filename_example' # String | 
+opts = {
+  idempotency_key: 'KEY_VALUE', # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+
+  mime_type: 'mime_type_example' # String | 
+}
+
+begin
+  #Uploads a File to a specific folder
+  result = api_instance.upload_file_to_folder(xero_tenant_id, folder_id, body, name, filename, opts)
+  p result
+rescue XeroRuby::Files::ApiError => e
+  puts "Exception when calling FilesApi->upload_file_to_folder: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xero_tenant_id** | **String**| Xero identifier for Tenant | 
+ **folder_id** | [**String**](.md)| pass required folder id to save file to specific folder | 
+ **body** | **String**|  | 
+ **name** | **String**| exact name of the file you are uploading | 
+ **filename** | **String**|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
  **mime_type** | **String**|  | [optional] 
 
 ### Return type

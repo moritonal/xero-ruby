@@ -4,84 +4,84 @@ All URIs are relative to *https://api.xero.com/payroll.xro/2.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**approve_timesheet**](PayrollUkApi.md#approve_timesheet) | **POST** /Timesheets/{TimesheetID}/Approve | approve a timesheet
-[**create_benefit**](PayrollUkApi.md#create_benefit) | **POST** /Benefits | create a new benefit
-[**create_deduction**](PayrollUkApi.md#create_deduction) | **POST** /Deductions | create a new deduction
-[**create_earnings_rate**](PayrollUkApi.md#create_earnings_rate) | **POST** /EarningsRates | create a new earnings rate
-[**create_employee**](PayrollUkApi.md#create_employee) | **POST** /Employees | creates employees
-[**create_employee_earnings_template**](PayrollUkApi.md#create_employee_earnings_template) | **POST** /Employees/{EmployeeId}/PayTemplates/earnings | creates employee earnings template records
-[**create_employee_leave**](PayrollUkApi.md#create_employee_leave) | **POST** /Employees/{EmployeeId}/Leave | creates employee leave records
-[**create_employee_leave_type**](PayrollUkApi.md#create_employee_leave_type) | **POST** /Employees/{EmployeeId}/LeaveTypes | creates employee leave type records
-[**create_employee_opening_balances**](PayrollUkApi.md#create_employee_opening_balances) | **POST** /Employees/{EmployeeId}/ukopeningbalances | creates employee opening balances
-[**create_employee_payment_method**](PayrollUkApi.md#create_employee_payment_method) | **POST** /Employees/{EmployeeId}/PaymentMethods | creates employee payment method
-[**create_employee_salary_and_wage**](PayrollUkApi.md#create_employee_salary_and_wage) | **POST** /Employees/{EmployeeId}/SalaryAndWages | creates employee salary and wage record
-[**create_employee_statutory_sick_leave**](PayrollUkApi.md#create_employee_statutory_sick_leave) | **POST** /StatutoryLeaves/Sick | creates employee statutory sick leave records
-[**create_employment**](PayrollUkApi.md#create_employment) | **POST** /Employees/{EmployeeId}/Employment | creates employment
-[**create_leave_type**](PayrollUkApi.md#create_leave_type) | **POST** /LeaveTypes | create a new leave type
-[**create_multiple_employee_earnings_template**](PayrollUkApi.md#create_multiple_employee_earnings_template) | **POST** /Employees/{EmployeeId}/paytemplateearnings | creates multiple employee earnings template records
-[**create_pay_run_calendar**](PayrollUkApi.md#create_pay_run_calendar) | **POST** /PayRunCalendars | create a new payrun calendar
-[**create_reimbursement**](PayrollUkApi.md#create_reimbursement) | **POST** /Reimbursements | create a new reimbursement
-[**create_timesheet**](PayrollUkApi.md#create_timesheet) | **POST** /Timesheets | create a new timesheet
-[**create_timesheet_line**](PayrollUkApi.md#create_timesheet_line) | **POST** /Timesheets/{TimesheetID}/Lines | create a new timesheet line
-[**delete_employee_earnings_template**](PayrollUkApi.md#delete_employee_earnings_template) | **DELETE** /Employees/{EmployeeId}/PayTemplates/earnings/{PayTemplateEarningID} | deletes an employee earnings template record
-[**delete_employee_leave**](PayrollUkApi.md#delete_employee_leave) | **DELETE** /Employees/{EmployeeId}/Leave/{LeaveID} | deletes an employee leave record
-[**delete_employee_salary_and_wage**](PayrollUkApi.md#delete_employee_salary_and_wage) | **DELETE** /Employees/{EmployeeId}/SalaryAndWages/{SalaryAndWagesID} | deletes an employee salary and wages record
-[**delete_timesheet**](PayrollUkApi.md#delete_timesheet) | **DELETE** /Timesheets/{TimesheetID} | delete a timesheet
-[**delete_timesheet_line**](PayrollUkApi.md#delete_timesheet_line) | **DELETE** /Timesheets/{TimesheetID}/Lines/{TimesheetLineID} | delete a timesheet line
-[**get_benefit**](PayrollUkApi.md#get_benefit) | **GET** /Benefits/{id} | retrieve a single benefit by id
-[**get_benefits**](PayrollUkApi.md#get_benefits) | **GET** /Benefits | searches benefits
-[**get_deduction**](PayrollUkApi.md#get_deduction) | **GET** /Deductions/{deductionId} | retrieve a single deduction by id
-[**get_deductions**](PayrollUkApi.md#get_deductions) | **GET** /Deductions | searches deductions
-[**get_earnings_order**](PayrollUkApi.md#get_earnings_order) | **GET** /EarningsOrders/{id} | retrieve a single deduction by id
-[**get_earnings_orders**](PayrollUkApi.md#get_earnings_orders) | **GET** /EarningsOrders | searches earnings orders
-[**get_earnings_rate**](PayrollUkApi.md#get_earnings_rate) | **GET** /EarningsRates/{EarningsRateID} | retrieve a single earnings rates by id
-[**get_earnings_rates**](PayrollUkApi.md#get_earnings_rates) | **GET** /EarningsRates | searches earnings rates
-[**get_employee**](PayrollUkApi.md#get_employee) | **GET** /Employees/{EmployeeId} | searches employees
-[**get_employee_leave**](PayrollUkApi.md#get_employee_leave) | **GET** /Employees/{EmployeeId}/Leave/{LeaveID} | retrieve a single employee leave record
-[**get_employee_leave_balances**](PayrollUkApi.md#get_employee_leave_balances) | **GET** /Employees/{EmployeeId}/LeaveBalances | search employee leave balances
-[**get_employee_leave_periods**](PayrollUkApi.md#get_employee_leave_periods) | **GET** /Employees/{EmployeeId}/LeavePeriods | searches employee leave periods
-[**get_employee_leave_types**](PayrollUkApi.md#get_employee_leave_types) | **GET** /Employees/{EmployeeId}/LeaveTypes | searches employee leave types
-[**get_employee_leaves**](PayrollUkApi.md#get_employee_leaves) | **GET** /Employees/{EmployeeId}/Leave | search employee leave records
-[**get_employee_opening_balances**](PayrollUkApi.md#get_employee_opening_balances) | **GET** /Employees/{EmployeeId}/ukopeningbalances | retrieve employee openingbalances
-[**get_employee_pay_template**](PayrollUkApi.md#get_employee_pay_template) | **GET** /Employees/{EmployeeId}/PayTemplates | searches employee pay templates
-[**get_employee_payment_method**](PayrollUkApi.md#get_employee_payment_method) | **GET** /Employees/{EmployeeId}/PaymentMethods | retrieves an employee&#39;s payment method
-[**get_employee_salary_and_wage**](PayrollUkApi.md#get_employee_salary_and_wage) | **GET** /Employees/{EmployeeId}/SalaryAndWages/{SalaryAndWagesID} | get employee salary and wages record by id
-[**get_employee_salary_and_wages**](PayrollUkApi.md#get_employee_salary_and_wages) | **GET** /Employees/{EmployeeId}/SalaryAndWages | retrieves an employee&#39;s salary and wages
-[**get_employee_statutory_leave_balances**](PayrollUkApi.md#get_employee_statutory_leave_balances) | **GET** /Employees/{EmployeeId}/StatutoryLeaveBalance | search employee leave balances
-[**get_employee_statutory_sick_leave**](PayrollUkApi.md#get_employee_statutory_sick_leave) | **GET** /StatutoryLeaves/Sick/{StatutorySickLeaveID} | retrieve a statutory sick leave for an employee
-[**get_employee_tax**](PayrollUkApi.md#get_employee_tax) | **GET** /Employees/{EmployeeId}/Tax | searches tax records for an employee
-[**get_employees**](PayrollUkApi.md#get_employees) | **GET** /Employees | searches employees
-[**get_leave_type**](PayrollUkApi.md#get_leave_type) | **GET** /LeaveTypes/{LeaveTypeID} | retrieve a single leave type by id
-[**get_leave_types**](PayrollUkApi.md#get_leave_types) | **GET** /LeaveTypes | searches leave types
-[**get_pay_run**](PayrollUkApi.md#get_pay_run) | **GET** /PayRuns/{PayRunID} | retrieve a single pay run by id
-[**get_pay_run_calendar**](PayrollUkApi.md#get_pay_run_calendar) | **GET** /PayRunCalendars/{PayRunCalendarID} | retrieve a single payrun calendar by id
-[**get_pay_run_calendars**](PayrollUkApi.md#get_pay_run_calendars) | **GET** /PayRunCalendars | searches payrun calendars
-[**get_pay_runs**](PayrollUkApi.md#get_pay_runs) | **GET** /PayRuns | searches pay runs
-[**get_pay_slip**](PayrollUkApi.md#get_pay_slip) | **GET** /Payslips/{PayslipID} | retrieve a single payslip by id
-[**get_pay_slips**](PayrollUkApi.md#get_pay_slips) | **GET** /Payslips | searches payslips
-[**get_reimbursement**](PayrollUkApi.md#get_reimbursement) | **GET** /Reimbursements/{ReimbursementID} | retrieve a single reimbursement by id
-[**get_reimbursements**](PayrollUkApi.md#get_reimbursements) | **GET** /Reimbursements | searches reimbursements
-[**get_settings**](PayrollUkApi.md#get_settings) | **GET** /Settings | searches settings
-[**get_statutory_leave_summary**](PayrollUkApi.md#get_statutory_leave_summary) | **GET** /statutoryleaves/summary/{EmployeeId} | retrieve a summary of statutory leaves for an employee
-[**get_timesheet**](PayrollUkApi.md#get_timesheet) | **GET** /Timesheets/{TimesheetID} | retrieve a single timesheet by id
-[**get_timesheets**](PayrollUkApi.md#get_timesheets) | **GET** /Timesheets | searches timesheets
-[**get_tracking_categories**](PayrollUkApi.md#get_tracking_categories) | **GET** /settings/trackingCategories | searches tracking categories
-[**revert_timesheet**](PayrollUkApi.md#revert_timesheet) | **POST** /Timesheets/{TimesheetID}/RevertToDraft | revert a timesheet to draft
-[**update_employee**](PayrollUkApi.md#update_employee) | **PUT** /Employees/{EmployeeId} | updates employee
-[**update_employee_earnings_template**](PayrollUkApi.md#update_employee_earnings_template) | **PUT** /Employees/{EmployeeId}/PayTemplates/earnings/{PayTemplateEarningID} | updates employee earnings template records
-[**update_employee_leave**](PayrollUkApi.md#update_employee_leave) | **PUT** /Employees/{EmployeeId}/Leave/{LeaveID} | updates employee leave records
-[**update_employee_opening_balances**](PayrollUkApi.md#update_employee_opening_balances) | **PUT** /Employees/{EmployeeId}/ukopeningbalances | updates employee opening balances
-[**update_employee_salary_and_wage**](PayrollUkApi.md#update_employee_salary_and_wage) | **PUT** /Employees/{EmployeeId}/SalaryAndWages/{SalaryAndWagesID} | updates employee salary and wages record
-[**update_pay_run**](PayrollUkApi.md#update_pay_run) | **PUT** /PayRuns/{PayRunID} | update a pay run
-[**update_timesheet_line**](PayrollUkApi.md#update_timesheet_line) | **PUT** /Timesheets/{TimesheetID}/Lines/{TimesheetLineID} | update a timesheet line
+[**approve_timesheet**](PayrollUkApi.md#approve_timesheet) | **POST** /Timesheets/{TimesheetID}/Approve | Approves a specific timesheet
+[**create_benefit**](PayrollUkApi.md#create_benefit) | **POST** /Benefits | Creates a new employee benefit
+[**create_deduction**](PayrollUkApi.md#create_deduction) | **POST** /Deductions | Creates a new deduction
+[**create_earnings_rate**](PayrollUkApi.md#create_earnings_rate) | **POST** /EarningsRates | Creates a new earnings rate
+[**create_employee**](PayrollUkApi.md#create_employee) | **POST** /Employees | Creates employees
+[**create_employee_earnings_template**](PayrollUkApi.md#create_employee_earnings_template) | **POST** /Employees/{EmployeeID}/PayTemplates/earnings | Creates an earnings template records for a specific employee
+[**create_employee_leave**](PayrollUkApi.md#create_employee_leave) | **POST** /Employees/{EmployeeID}/Leave | Creates leave records for a specific employee
+[**create_employee_leave_type**](PayrollUkApi.md#create_employee_leave_type) | **POST** /Employees/{EmployeeID}/LeaveTypes | Creates employee leave type records
+[**create_employee_opening_balances**](PayrollUkApi.md#create_employee_opening_balances) | **POST** /Employees/{EmployeeID}/ukopeningbalances | Creates an opening balance for a specific employee
+[**create_employee_payment_method**](PayrollUkApi.md#create_employee_payment_method) | **POST** /Employees/{EmployeeID}/PaymentMethods | Creates an employee payment method
+[**create_employee_salary_and_wage**](PayrollUkApi.md#create_employee_salary_and_wage) | **POST** /Employees/{EmployeeID}/SalaryAndWages | Creates a salary and wage record for a specific employee
+[**create_employee_statutory_sick_leave**](PayrollUkApi.md#create_employee_statutory_sick_leave) | **POST** /StatutoryLeaves/Sick | Creates statutory sick leave records
+[**create_employment**](PayrollUkApi.md#create_employment) | **POST** /Employees/{EmployeeID}/Employment | Creates employment detail for a specific employee using a unique employee ID
+[**create_leave_type**](PayrollUkApi.md#create_leave_type) | **POST** /LeaveTypes | Creates a new leave type
+[**create_multiple_employee_earnings_template**](PayrollUkApi.md#create_multiple_employee_earnings_template) | **POST** /Employees/{EmployeeID}/paytemplateearnings | Creates multiple earnings template records for a specific employee using a unique employee ID
+[**create_pay_run_calendar**](PayrollUkApi.md#create_pay_run_calendar) | **POST** /PayRunCalendars | Creates a new payrun calendar
+[**create_reimbursement**](PayrollUkApi.md#create_reimbursement) | **POST** /Reimbursements | Creates a new reimbursement
+[**create_timesheet**](PayrollUkApi.md#create_timesheet) | **POST** /Timesheets | Creates a new timesheet
+[**create_timesheet_line**](PayrollUkApi.md#create_timesheet_line) | **POST** /Timesheets/{TimesheetID}/Lines | Creates a new timesheet line for a specific timesheet using a unique timesheet ID
+[**delete_employee_earnings_template**](PayrollUkApi.md#delete_employee_earnings_template) | **DELETE** /Employees/{EmployeeID}/PayTemplates/earnings/{PayTemplateEarningID} | Deletes a specific employee&#39;s earnings template record
+[**delete_employee_leave**](PayrollUkApi.md#delete_employee_leave) | **DELETE** /Employees/{EmployeeID}/Leave/{LeaveID} | Deletes a specific employee&#39;s leave record
+[**delete_employee_salary_and_wage**](PayrollUkApi.md#delete_employee_salary_and_wage) | **DELETE** /Employees/{EmployeeID}/SalaryAndWages/{SalaryAndWagesID} | Deletes a salary and wages record for a specific employee
+[**delete_timesheet**](PayrollUkApi.md#delete_timesheet) | **DELETE** /Timesheets/{TimesheetID} | Deletes a specific timesheet
+[**delete_timesheet_line**](PayrollUkApi.md#delete_timesheet_line) | **DELETE** /Timesheets/{TimesheetID}/Lines/{TimesheetLineID} | Deletes a specific timesheet line
+[**get_benefit**](PayrollUkApi.md#get_benefit) | **GET** /Benefits/{id} | Retrieves a specific benefit by using a unique benefit ID
+[**get_benefits**](PayrollUkApi.md#get_benefits) | **GET** /Benefits | Retrieves employee benefits
+[**get_deduction**](PayrollUkApi.md#get_deduction) | **GET** /Deductions/{deductionId} | Retrieves a specific deduction by using a unique deduction ID
+[**get_deductions**](PayrollUkApi.md#get_deductions) | **GET** /Deductions | Retrieves deductions
+[**get_earnings_order**](PayrollUkApi.md#get_earnings_order) | **GET** /EarningsOrders/{id} | Retrieves a specific earnings orders by using a unique earnings orders id
+[**get_earnings_orders**](PayrollUkApi.md#get_earnings_orders) | **GET** /EarningsOrders | Retrieves earnings orders
+[**get_earnings_rate**](PayrollUkApi.md#get_earnings_rate) | **GET** /EarningsRates/{EarningsRateID} | Retrieves a specific earnings rates by using a unique earnings rate id
+[**get_earnings_rates**](PayrollUkApi.md#get_earnings_rates) | **GET** /EarningsRates | Retrieves earnings rates
+[**get_employee**](PayrollUkApi.md#get_employee) | **GET** /Employees/{EmployeeID} | Retrieves specific employees by using a unique employee ID
+[**get_employee_leave**](PayrollUkApi.md#get_employee_leave) | **GET** /Employees/{EmployeeID}/Leave/{LeaveID} | Retrieves a specific employee&#39;s leave record using a unique employee ID
+[**get_employee_leave_balances**](PayrollUkApi.md#get_employee_leave_balances) | **GET** /Employees/{EmployeeID}/LeaveBalances | Retrieves a specific employee&#39;s leave balances using a unique employee ID
+[**get_employee_leave_periods**](PayrollUkApi.md#get_employee_leave_periods) | **GET** /Employees/{EmployeeID}/LeavePeriods | Retrieves a specific employee&#39;s leave periods using a unique employee ID
+[**get_employee_leave_types**](PayrollUkApi.md#get_employee_leave_types) | **GET** /Employees/{EmployeeID}/LeaveTypes | Retrieves a specific employee&#39;s leave types using a unique employee ID
+[**get_employee_leaves**](PayrollUkApi.md#get_employee_leaves) | **GET** /Employees/{EmployeeID}/Leave | Retrieves a specific employee&#39;s leave records using a unique employee ID
+[**get_employee_opening_balances**](PayrollUkApi.md#get_employee_opening_balances) | **GET** /Employees/{EmployeeID}/ukopeningbalances | Retrieves a specific employee&#39;s openingbalances using a unique employee ID
+[**get_employee_pay_template**](PayrollUkApi.md#get_employee_pay_template) | **GET** /Employees/{EmployeeID}/PayTemplates | Retrieves a specific employee pay templates using a unique employee ID
+[**get_employee_payment_method**](PayrollUkApi.md#get_employee_payment_method) | **GET** /Employees/{EmployeeID}/PaymentMethods | Retrieves a specific employee&#39;s payment method using a unique employee ID
+[**get_employee_salary_and_wage**](PayrollUkApi.md#get_employee_salary_and_wage) | **GET** /Employees/{EmployeeID}/SalaryAndWages/{SalaryAndWagesID} | Retrieves a specific salary and wages record for a specific employee using a unique salary and wage id
+[**get_employee_salary_and_wages**](PayrollUkApi.md#get_employee_salary_and_wages) | **GET** /Employees/{EmployeeID}/SalaryAndWages | Retrieves a specific employee&#39;s salary and wages by using a unique employee ID
+[**get_employee_statutory_leave_balances**](PayrollUkApi.md#get_employee_statutory_leave_balances) | **GET** /Employees/{EmployeeID}/StatutoryLeaveBalance | Retrieves a specific employee&#39;s leave balances using a unique employee ID
+[**get_employee_statutory_sick_leave**](PayrollUkApi.md#get_employee_statutory_sick_leave) | **GET** /StatutoryLeaves/Sick/{StatutorySickLeaveID} | Retrieves a statutory sick leave for an employee
+[**get_employee_tax**](PayrollUkApi.md#get_employee_tax) | **GET** /Employees/{EmployeeID}/Tax | Retrieves tax records for a specific employee using a unique employee ID
+[**get_employees**](PayrollUkApi.md#get_employees) | **GET** /Employees | Retrieves employees
+[**get_leave_type**](PayrollUkApi.md#get_leave_type) | **GET** /LeaveTypes/{LeaveTypeID} | Retrieves a specific leave type by using a unique leave type ID
+[**get_leave_types**](PayrollUkApi.md#get_leave_types) | **GET** /LeaveTypes | Retrieves leave types
+[**get_pay_run**](PayrollUkApi.md#get_pay_run) | **GET** /PayRuns/{PayRunID} | Retrieves a specific pay run by using a unique pay run ID
+[**get_pay_run_calendar**](PayrollUkApi.md#get_pay_run_calendar) | **GET** /PayRunCalendars/{PayRunCalendarID} | Retrieves a specific payrun calendar by using a unique payrun calendar ID
+[**get_pay_run_calendars**](PayrollUkApi.md#get_pay_run_calendars) | **GET** /PayRunCalendars | Retrieves payrun calendars
+[**get_pay_runs**](PayrollUkApi.md#get_pay_runs) | **GET** /PayRuns | Retrieves pay runs
+[**get_pay_slip**](PayrollUkApi.md#get_pay_slip) | **GET** /Payslips/{PayslipID} | Retrieves a specific payslip by using a unique payslip ID
+[**get_pay_slips**](PayrollUkApi.md#get_pay_slips) | **GET** /Payslips | Retrieves payslips
+[**get_reimbursement**](PayrollUkApi.md#get_reimbursement) | **GET** /Reimbursements/{ReimbursementID} | Retrieves a specific reimbursement by using a unique reimbursement id
+[**get_reimbursements**](PayrollUkApi.md#get_reimbursements) | **GET** /Reimbursements | Retrieves reimbursements
+[**get_settings**](PayrollUkApi.md#get_settings) | **GET** /Settings | Retrieves payroll settings
+[**get_statutory_leave_summary**](PayrollUkApi.md#get_statutory_leave_summary) | **GET** /StatutoryLeaves/Summary/{EmployeeID} | Retrieves a specific employee&#39;s summary of statutory leaves using a unique employee ID
+[**get_timesheet**](PayrollUkApi.md#get_timesheet) | **GET** /Timesheets/{TimesheetID} | Retrieve a specific timesheet by using a unique timesheet ID
+[**get_timesheets**](PayrollUkApi.md#get_timesheets) | **GET** /Timesheets | Retrieves timesheets
+[**get_tracking_categories**](PayrollUkApi.md#get_tracking_categories) | **GET** /Settings/trackingCategories | Retrieves tracking categories
+[**revert_timesheet**](PayrollUkApi.md#revert_timesheet) | **POST** /Timesheets/{TimesheetID}/RevertToDraft | Reverts a specific timesheet to draft
+[**update_employee**](PayrollUkApi.md#update_employee) | **PUT** /Employees/{EmployeeID} | Updates a specific employee&#39;s detail
+[**update_employee_earnings_template**](PayrollUkApi.md#update_employee_earnings_template) | **PUT** /Employees/{EmployeeID}/PayTemplates/earnings/{PayTemplateEarningID} | Updates a specific employee&#39;s earnings template records
+[**update_employee_leave**](PayrollUkApi.md#update_employee_leave) | **PUT** /Employees/{EmployeeID}/Leave/{LeaveID} | Updates a specific employee&#39;s leave records
+[**update_employee_opening_balances**](PayrollUkApi.md#update_employee_opening_balances) | **PUT** /Employees/{EmployeeID}/ukopeningbalances | Updates a specific employee&#39;s opening balances
+[**update_employee_salary_and_wage**](PayrollUkApi.md#update_employee_salary_and_wage) | **PUT** /Employees/{EmployeeID}/SalaryAndWages/{SalaryAndWagesID} | Updates salary and wages record for a specific employee
+[**update_pay_run**](PayrollUkApi.md#update_pay_run) | **PUT** /PayRuns/{PayRunID} | Updates a specific pay run
+[**update_timesheet_line**](PayrollUkApi.md#update_timesheet_line) | **PUT** /Timesheets/{TimesheetID}/Lines/{TimesheetLineID} | Updates a specific timesheet line for a specific timesheet
 
 
 
 ## approve_timesheet
 
-> TimesheetObject approve_timesheet(xero_tenant_id, timesheet_id)
+> TimesheetObject approve_timesheet(xero_tenant_id, timesheet_id, opts)
 
-approve a timesheet
+Approves a specific timesheet
 
 ### Example
 
@@ -102,7 +102,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -110,9 +110,13 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 timesheet_id = 'timesheet_id_example' # String | Identifier for the timesheet
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #approve a timesheet
-  result = api_instance.approve_timesheet(xero_tenant_id, timesheet_id)
+  #Approves a specific timesheet
+  result = api_instance.approve_timesheet(xero_tenant_id, timesheet_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->approve_timesheet: #{e}"
@@ -126,6 +130,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **timesheet_id** | [**String**](.md)| Identifier for the timesheet | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -143,9 +148,9 @@ Name | Type | Description  | Notes
 
 ## create_benefit
 
-> BenefitObject create_benefit(xero_tenant_id, benefit)
+> BenefitObject create_benefit(xero_tenant_id, benefit, opts)
 
-create a new benefit
+Creates a new employee benefit
 
 ### Example
 
@@ -166,7 +171,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -174,9 +179,13 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 benefit = { "name": "My Big Bennie", "category": "StakeholderPension", "liabilityAccountId": "e0faa299-ca0d-4b0a-9e32-0dfabdf9179a", "expenseAccountId": "4b03500d-32fd-4616-8d70-e1e56e0519c6", "standardAmount": 50, "percentage": 25, "calculationType": "PercentageOfGross" } # Benefit | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #create a new benefit
-  result = api_instance.create_benefit(xero_tenant_id, benefit)
+  #Creates a new employee benefit
+  result = api_instance.create_benefit(xero_tenant_id, benefit, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_benefit: #{e}"
@@ -190,6 +199,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **benefit** | [**Benefit**](Benefit.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -207,9 +217,9 @@ Name | Type | Description  | Notes
 
 ## create_deduction
 
-> DeductionObject create_deduction(xero_tenant_id, deduction)
+> DeductionObject create_deduction(xero_tenant_id, deduction, opts)
 
-create a new deduction
+Creates a new deduction
 
 ### Example
 
@@ -230,17 +240,21 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
 
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
-deduction = { "deductionName": "My new deducation", "deductionCategory": "SalarySacrifice", "liabilityAccountId": "e0faa299-ca0d-4b0a-9e32-0dfabdf9179a", "calculationType": "FixedAmount" } # Deduction | 
+deduction = { "deductionName": "My new deduction", "deductionCategory": "SalarySacrifice", "liabilityAccountId": "e0faa299-ca0d-4b0a-9e32-0dfabdf9179a", "calculationType": "FixedAmount" } # Deduction | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #create a new deduction
-  result = api_instance.create_deduction(xero_tenant_id, deduction)
+  #Creates a new deduction
+  result = api_instance.create_deduction(xero_tenant_id, deduction, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_deduction: #{e}"
@@ -254,6 +268,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **deduction** | [**Deduction**](Deduction.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -271,9 +286,9 @@ Name | Type | Description  | Notes
 
 ## create_earnings_rate
 
-> EarningsRateObject create_earnings_rate(xero_tenant_id, earnings_rate)
+> EarningsRateObject create_earnings_rate(xero_tenant_id, earnings_rate, opts)
 
-create a new earnings rate
+Creates a new earnings rate
 
 ### Example
 
@@ -294,7 +309,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -302,9 +317,13 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 earnings_rate = { "name": "My Earnings Rate", "earningsType": "RegularEarnings", "rateType": "RatePerUnit", "typeOfUnits": "hours", "expenseAccountID": "4b03500d-32fd-4616-8d70-e1e56e0519c6" } # EarningsRate | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #create a new earnings rate
-  result = api_instance.create_earnings_rate(xero_tenant_id, earnings_rate)
+  #Creates a new earnings rate
+  result = api_instance.create_earnings_rate(xero_tenant_id, earnings_rate, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_earnings_rate: #{e}"
@@ -318,6 +337,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **earnings_rate** | [**EarningsRate**](EarningsRate.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -335,9 +355,9 @@ Name | Type | Description  | Notes
 
 ## create_employee
 
-> EmployeeObject create_employee(xero_tenant_id, employee)
+> EmployeeObject create_employee(xero_tenant_id, employee, opts)
 
-creates employees
+Creates employees
 
 ### Example
 
@@ -358,17 +378,21 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
 
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
-employee = { "title":"Mr", "firstName":"Mike", "lastName":"Fancy", "dateOfBirth":"1999-01-01", "address":{ "addressLine1":"101 Green St", "city":"San Francisco", "postCode":"6TGR4F", "country":"UK" }, "email":"mike@starkindustries.com", "gender":"M" } # Employee | 
+employee = { "title":"Mr", "firstName":"Mike", "lastName":"Fancy", "dateOfBirth":"1999-01-01T00:00:00", "gender":"M", "email":"mike@starkindustries.com", "isOffPayrollWorker": false, "address": { "addressLine1": "171 Midsummer", "city": "Milton Keyness", "postCode": "MK9 1EB" } } # Employee | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #creates employees
-  result = api_instance.create_employee(xero_tenant_id, employee)
+  #Creates employees
+  result = api_instance.create_employee(xero_tenant_id, employee, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_employee: #{e}"
@@ -382,6 +406,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **employee** | [**Employee**](Employee.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -399,9 +424,9 @@ Name | Type | Description  | Notes
 
 ## create_employee_earnings_template
 
-> EarningsTemplateObject create_employee_earnings_template(xero_tenant_id, employee_id, earnings_template)
+> EarningsTemplateObject create_employee_earnings_template(xero_tenant_id, employee_id, earnings_template, opts)
 
-creates employee earnings template records
+Creates an earnings template records for a specific employee
 
 ### Example
 
@@ -422,7 +447,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -431,9 +456,13 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 earnings_template = XeroRuby::PayrollUk::EarningsTemplate.new # EarningsTemplate | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #creates employee earnings template records
-  result = api_instance.create_employee_earnings_template(xero_tenant_id, employee_id, earnings_template)
+  #Creates an earnings template records for a specific employee
+  result = api_instance.create_employee_earnings_template(xero_tenant_id, employee_id, earnings_template, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_employee_earnings_template: #{e}"
@@ -448,6 +477,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **earnings_template** | [**EarningsTemplate**](EarningsTemplate.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -465,9 +495,9 @@ Name | Type | Description  | Notes
 
 ## create_employee_leave
 
-> EmployeeLeaveObject create_employee_leave(xero_tenant_id, employee_id, employee_leave)
+> EmployeeLeaveObject create_employee_leave(xero_tenant_id, employee_id, employee_leave, opts)
 
-creates employee leave records
+Creates leave records for a specific employee
 
 ### Example
 
@@ -488,7 +518,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -496,10 +526,14 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
-employee_leave = { "leaveTypeID": "1d2778ee-86ea-45c0-bbf8-1045485f6b3f", "description": "Creating a Desription", "startDate": "2020-03-24", "endDate": "2020-03-26" } # EmployeeLeave | 
+employee_leave = { "leaveTypeID": "1d2778ee-86ea-45c0-bbf8-1045485f6b3f", "description": "Creating a Description", "startDate": "2020-03-24", "endDate": "2020-03-26" } # EmployeeLeave | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #creates employee leave records
-  result = api_instance.create_employee_leave(xero_tenant_id, employee_id, employee_leave)
+  #Creates leave records for a specific employee
+  result = api_instance.create_employee_leave(xero_tenant_id, employee_id, employee_leave, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_employee_leave: #{e}"
@@ -514,6 +548,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **employee_leave** | [**EmployeeLeave**](EmployeeLeave.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -531,9 +566,9 @@ Name | Type | Description  | Notes
 
 ## create_employee_leave_type
 
-> EmployeeLeaveTypeObject create_employee_leave_type(xero_tenant_id, employee_id, employee_leave_type)
+> EmployeeLeaveTypeObject create_employee_leave_type(xero_tenant_id, employee_id, employee_leave_type, opts)
 
-creates employee leave type records
+Creates employee leave type records
 
 ### Example
 
@@ -554,7 +589,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -563,9 +598,13 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 employee_leave_type = { "leaveTypeID": "4918f233-bd31-43f9-9633-bcc6de1178f2", "scheduleOfAccrual": "BeginningOfCalendarYear", "hoursAccruedAnnually": 10 } # EmployeeLeaveType | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #creates employee leave type records
-  result = api_instance.create_employee_leave_type(xero_tenant_id, employee_id, employee_leave_type)
+  #Creates employee leave type records
+  result = api_instance.create_employee_leave_type(xero_tenant_id, employee_id, employee_leave_type, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_employee_leave_type: #{e}"
@@ -580,6 +619,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **employee_leave_type** | [**EmployeeLeaveType**](EmployeeLeaveType.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -597,9 +637,9 @@ Name | Type | Description  | Notes
 
 ## create_employee_opening_balances
 
-> EmployeeOpeningBalancesObject create_employee_opening_balances(xero_tenant_id, employee_id, employee_opening_balances)
+> EmployeeOpeningBalancesObject create_employee_opening_balances(xero_tenant_id, employee_id, employee_opening_balances, opts)
 
-creates employee opening balances
+Creates an opening balance for a specific employee
 
 ### Example
 
@@ -620,7 +660,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -629,9 +669,13 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 employee_opening_balances = { "statutoryAdoptionPay": 10, "statutoryMaternityPay": 10, "statutoryPaternityPay": 10, "statutorySharedParentalPay": 10, "statutorySickPay": 10, "priorEmployeeNumber": 10 } # EmployeeOpeningBalances | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #creates employee opening balances
-  result = api_instance.create_employee_opening_balances(xero_tenant_id, employee_id, employee_opening_balances)
+  #Creates an opening balance for a specific employee
+  result = api_instance.create_employee_opening_balances(xero_tenant_id, employee_id, employee_opening_balances, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_employee_opening_balances: #{e}"
@@ -646,6 +690,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **employee_opening_balances** | [**EmployeeOpeningBalances**](EmployeeOpeningBalances.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -663,9 +708,9 @@ Name | Type | Description  | Notes
 
 ## create_employee_payment_method
 
-> PaymentMethodObject create_employee_payment_method(xero_tenant_id, employee_id, payment_method)
+> PaymentMethodObject create_employee_payment_method(xero_tenant_id, employee_id, payment_method, opts)
 
-creates employee payment method
+Creates an employee payment method
 
 ### Example
 
@@ -686,7 +731,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -695,9 +740,13 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 payment_method = { "paymentMethod": "Electronically", "bankAccounts": [ { "accountName": "Sid BofA", "accountNumber": "24987654", "sortCode": "287654" } ] } # PaymentMethod | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #creates employee payment method
-  result = api_instance.create_employee_payment_method(xero_tenant_id, employee_id, payment_method)
+  #Creates an employee payment method
+  result = api_instance.create_employee_payment_method(xero_tenant_id, employee_id, payment_method, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_employee_payment_method: #{e}"
@@ -712,6 +761,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **payment_method** | [**PaymentMethod**](PaymentMethod.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -729,9 +779,9 @@ Name | Type | Description  | Notes
 
 ## create_employee_salary_and_wage
 
-> SalaryAndWageObject create_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wage)
+> SalaryAndWageObject create_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wage, opts)
 
-creates employee salary and wage record
+Creates a salary and wage record for a specific employee
 
 ### Example
 
@@ -752,7 +802,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -761,9 +811,13 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 salary_and_wage = { "earningsRateID": "87f5b43a-cf51-4b74-92de-94c819e82d27", "numberOfUnitsPerWeek": 2, "ratePerUnit": 10, "numberOfUnitsPerDay": 2, "effectiveFrom": "2020-05-01", "annualSalary": 100, "status": "ACTIVE", "paymentType": "Salary" } # SalaryAndWage | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #creates employee salary and wage record
-  result = api_instance.create_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wage)
+  #Creates a salary and wage record for a specific employee
+  result = api_instance.create_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wage, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_employee_salary_and_wage: #{e}"
@@ -778,6 +832,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **salary_and_wage** | [**SalaryAndWage**](SalaryAndWage.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -795,9 +850,9 @@ Name | Type | Description  | Notes
 
 ## create_employee_statutory_sick_leave
 
-> EmployeeStatutorySickLeaveObject create_employee_statutory_sick_leave(xero_tenant_id, employee_statutory_sick_leave)
+> EmployeeStatutorySickLeaveObject create_employee_statutory_sick_leave(xero_tenant_id, employee_statutory_sick_leave, opts)
 
-creates employee statutory sick leave records
+Creates statutory sick leave records
 
 ### Example
 
@@ -818,7 +873,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -826,9 +881,13 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_statutory_sick_leave = { "employeeID": "aad6b292-7b94-408b-93f6-e489867e3fb0", "leaveTypeID": "aab78802-e9d3-4bbd-bc87-df858054988f", "startDate": "2020-04-21", "endDate": "2020-04-24", "workPattern": [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" ], "isPregnancyRelated": false, "sufficientNotice": true } # EmployeeStatutorySickLeave | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #creates employee statutory sick leave records
-  result = api_instance.create_employee_statutory_sick_leave(xero_tenant_id, employee_statutory_sick_leave)
+  #Creates statutory sick leave records
+  result = api_instance.create_employee_statutory_sick_leave(xero_tenant_id, employee_statutory_sick_leave, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_employee_statutory_sick_leave: #{e}"
@@ -842,6 +901,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **employee_statutory_sick_leave** | [**EmployeeStatutorySickLeave**](EmployeeStatutorySickLeave.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -859,9 +919,9 @@ Name | Type | Description  | Notes
 
 ## create_employment
 
-> EmploymentObject create_employment(xero_tenant_id, employee_id, employment)
+> EmploymentObject create_employment(xero_tenant_id, employee_id, employment, opts)
 
-creates employment
+Creates employment detail for a specific employee using a unique employee ID
 
 ### Example
 
@@ -882,7 +942,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -891,9 +951,13 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 employment = { "PayrollCalendarID": "216d80e6-af55-47b1-b718-9457c3f5d2fe", "StartDate": "2020-04-01", "EmployeeNumber": "123ABC", "NICategory": "A" } # Employment | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #creates employment
-  result = api_instance.create_employment(xero_tenant_id, employee_id, employment)
+  #Creates employment detail for a specific employee using a unique employee ID
+  result = api_instance.create_employment(xero_tenant_id, employee_id, employment, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_employment: #{e}"
@@ -908,6 +972,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **employment** | [**Employment**](Employment.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -925,9 +990,9 @@ Name | Type | Description  | Notes
 
 ## create_leave_type
 
-> LeaveTypeObject create_leave_type(xero_tenant_id, leave_type)
+> LeaveTypeObject create_leave_type(xero_tenant_id, leave_type, opts)
 
-create a new leave type
+Creates a new leave type
 
 ### Example
 
@@ -948,7 +1013,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -956,9 +1021,13 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 leave_type = { "name": "My opebvwbfxf Leave", "isPaidLeave": false, "showOnPayslip": true } # LeaveType | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #create a new leave type
-  result = api_instance.create_leave_type(xero_tenant_id, leave_type)
+  #Creates a new leave type
+  result = api_instance.create_leave_type(xero_tenant_id, leave_type, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_leave_type: #{e}"
@@ -972,6 +1041,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **leave_type** | [**LeaveType**](LeaveType.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -989,9 +1059,9 @@ Name | Type | Description  | Notes
 
 ## create_multiple_employee_earnings_template
 
-> EmployeePayTemplates create_multiple_employee_earnings_template(xero_tenant_id, employee_id, earnings_template)
+> EmployeePayTemplates create_multiple_employee_earnings_template(xero_tenant_id, employee_id, earnings_template, opts)
 
-creates multiple employee earnings template records
+Creates multiple earnings template records for a specific employee using a unique employee ID
 
 ### Example
 
@@ -1012,7 +1082,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1021,9 +1091,13 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 earnings_template = [ { "ratePerUnit":20.0, "numberOfUnits":8.0, "earningsRateID":"87f5b43a-cf51-4b74-92de-94c819e82d27" }, { "ratePerUnit":20.0, "numberOfUnits":8.0, "earningsRateID":"973365f3-66b2-4c33-8ae6-14b75f78f68b" } ] # Array<EarningsTemplate> | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #creates multiple employee earnings template records
-  result = api_instance.create_multiple_employee_earnings_template(xero_tenant_id, employee_id, earnings_template)
+  #Creates multiple earnings template records for a specific employee using a unique employee ID
+  result = api_instance.create_multiple_employee_earnings_template(xero_tenant_id, employee_id, earnings_template, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_multiple_employee_earnings_template: #{e}"
@@ -1038,6 +1112,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **earnings_template** | [**Array&lt;EarningsTemplate&gt;**](EarningsTemplate.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -1055,9 +1130,9 @@ Name | Type | Description  | Notes
 
 ## create_pay_run_calendar
 
-> PayRunCalendarObject create_pay_run_calendar(xero_tenant_id, pay_run_calendar)
+> PayRunCalendarObject create_pay_run_calendar(xero_tenant_id, pay_run_calendar, opts)
 
-create a new payrun calendar
+Creates a new payrun calendar
 
 ### Example
 
@@ -1078,7 +1153,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1086,9 +1161,13 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 pay_run_calendar = { "name": "My Weekly Cal", "calendarType": "Weekly", "periodStartDate": "2020-05-01", "paymentDate": "2020-05-15" } # PayRunCalendar | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #create a new payrun calendar
-  result = api_instance.create_pay_run_calendar(xero_tenant_id, pay_run_calendar)
+  #Creates a new payrun calendar
+  result = api_instance.create_pay_run_calendar(xero_tenant_id, pay_run_calendar, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_pay_run_calendar: #{e}"
@@ -1102,6 +1181,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **pay_run_calendar** | [**PayRunCalendar**](PayRunCalendar.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -1119,9 +1199,9 @@ Name | Type | Description  | Notes
 
 ## create_reimbursement
 
-> ReimbursementObject create_reimbursement(xero_tenant_id, reimbursement)
+> ReimbursementObject create_reimbursement(xero_tenant_id, reimbursement, opts)
 
-create a new reimbursement
+Creates a new reimbursement
 
 ### Example
 
@@ -1142,7 +1222,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1150,9 +1230,13 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 reimbursement = { "name": "My new Reimburse", "accountID": "9ee28149-32a9-4661-8eab-a28738696983" } # Reimbursement | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #create a new reimbursement
-  result = api_instance.create_reimbursement(xero_tenant_id, reimbursement)
+  #Creates a new reimbursement
+  result = api_instance.create_reimbursement(xero_tenant_id, reimbursement, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_reimbursement: #{e}"
@@ -1166,6 +1250,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **reimbursement** | [**Reimbursement**](Reimbursement.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -1183,9 +1268,9 @@ Name | Type | Description  | Notes
 
 ## create_timesheet
 
-> TimesheetObject create_timesheet(xero_tenant_id, timesheet)
+> TimesheetObject create_timesheet(xero_tenant_id, timesheet, opts)
 
-create a new timesheet
+Creates a new timesheet
 
 ### Example
 
@@ -1206,7 +1291,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1214,9 +1299,13 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 timesheet = { "payrollCalendarID": "216d80e6-af55-47b1-b718-9457c3f5d2fe", "employeeID": "aad6b292-7b94-408b-93f6-e489867e3fb0", "startDate": "2020-04-13", "endDate": "2020-04-19", "timesheetLines": [ { "date": "2020-04-13", "earningsRateID": "87f5b43a-cf51-4b74-92de-94c819e82d27", "numberOfUnits": 8 }, { "date": "2020-04-15", "earningsRateID": "87f5b43a-cf51-4b74-92de-94c819e82d27", "numberOfUnits": 6 } ] } # Timesheet | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #create a new timesheet
-  result = api_instance.create_timesheet(xero_tenant_id, timesheet)
+  #Creates a new timesheet
+  result = api_instance.create_timesheet(xero_tenant_id, timesheet, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_timesheet: #{e}"
@@ -1230,6 +1319,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **timesheet** | [**Timesheet**](Timesheet.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -1247,9 +1337,9 @@ Name | Type | Description  | Notes
 
 ## create_timesheet_line
 
-> TimesheetLineObject create_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line)
+> TimesheetLineObject create_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line, opts)
 
-create a new timesheet line
+Creates a new timesheet line for a specific timesheet using a unique timesheet ID
 
 ### Example
 
@@ -1270,7 +1360,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1279,9 +1369,13 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 timesheet_id = 'timesheet_id_example' # String | Identifier for the timesheet
 timesheet_line = { "date": "2020-04-14", "earningsRateID": "87f5b43a-cf51-4b74-92de-94c819e82d27", "numberOfUnits": 1 } # TimesheetLine | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #create a new timesheet line
-  result = api_instance.create_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line)
+  #Creates a new timesheet line for a specific timesheet using a unique timesheet ID
+  result = api_instance.create_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->create_timesheet_line: #{e}"
@@ -1296,6 +1390,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **timesheet_id** | [**String**](.md)| Identifier for the timesheet | 
  **timesheet_line** | [**TimesheetLine**](TimesheetLine.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -1315,7 +1410,7 @@ Name | Type | Description  | Notes
 
 > delete_employee_earnings_template(xero_tenant_id, employee_id, pay_template_earning_id)
 
-deletes an employee earnings template record
+Deletes a specific employee's earnings template record
 
 ### Example
 
@@ -1336,7 +1431,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1346,7 +1441,7 @@ xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 pay_template_earning_id = '3fa85f64-5717-4562-b3fc-2c963f66afa6' # String | Id for single pay template earnings object
 begin
-  #deletes an employee earnings template record
+  #Deletes a specific employee's earnings template record
   api_instance.delete_employee_earnings_template(xero_tenant_id, employee_id, pay_template_earning_id)
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->delete_employee_earnings_template: #{e}"
@@ -1380,7 +1475,7 @@ nil (empty response body)
 
 > EmployeeLeaveObject delete_employee_leave(xero_tenant_id, employee_id, leave_id)
 
-deletes an employee leave record
+Deletes a specific employee's leave record
 
 ### Example
 
@@ -1401,7 +1496,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1411,7 +1506,7 @@ xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 leave_id = 'c4be24e5-e840-4c92-9eaa-2d86cd596314' # String | Leave id for single object
 begin
-  #deletes an employee leave record
+  #Deletes a specific employee's leave record
   result = api_instance.delete_employee_leave(xero_tenant_id, employee_id, leave_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -1446,7 +1541,7 @@ Name | Type | Description  | Notes
 
 > delete_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wages_id)
 
-deletes an employee salary and wages record
+Deletes a salary and wages record for a specific employee
 
 ### Example
 
@@ -1467,7 +1562,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1477,7 +1572,7 @@ xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 salary_and_wages_id = '3fa85f64-5717-4562-b3fc-2c963f66afa6' # String | Id for single salary and wages object
 begin
-  #deletes an employee salary and wages record
+  #Deletes a salary and wages record for a specific employee
   api_instance.delete_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wages_id)
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->delete_employee_salary_and_wage: #{e}"
@@ -1511,7 +1606,7 @@ nil (empty response body)
 
 > TimesheetLine delete_timesheet(xero_tenant_id, timesheet_id)
 
-delete a timesheet
+Deletes a specific timesheet
 
 ### Example
 
@@ -1532,7 +1627,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1541,7 +1636,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 timesheet_id = 'timesheet_id_example' # String | Identifier for the timesheet
 begin
-  #delete a timesheet
+  #Deletes a specific timesheet
   result = api_instance.delete_timesheet(xero_tenant_id, timesheet_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -1575,7 +1670,7 @@ Name | Type | Description  | Notes
 
 > TimesheetLine delete_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line_id)
 
-delete a timesheet line
+Deletes a specific timesheet line
 
 ### Example
 
@@ -1596,7 +1691,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1606,7 +1701,7 @@ xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 timesheet_id = 'timesheet_id_example' # String | Identifier for the timesheet
 timesheet_line_id = 'timesheet_line_id_example' # String | Identifier for the timesheet line
 begin
-  #delete a timesheet line
+  #Deletes a specific timesheet line
   result = api_instance.delete_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -1641,7 +1736,7 @@ Name | Type | Description  | Notes
 
 > BenefitObject get_benefit(xero_tenant_id, id)
 
-retrieve a single benefit by id
+Retrieves a specific benefit by using a unique benefit ID
 
 ### Example
 
@@ -1662,7 +1757,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1671,7 +1766,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 id = 'id_example' # String | Identifier for the benefit
 begin
-  #retrieve a single benefit by id
+  #Retrieves a specific benefit by using a unique benefit ID
   result = api_instance.get_benefit(xero_tenant_id, id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -1705,7 +1800,7 @@ Name | Type | Description  | Notes
 
 > Benefits get_benefits(xero_tenant_id, opts)
 
-searches benefits
+Retrieves employee benefits
 
 ### Example
 
@@ -1726,7 +1821,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1738,7 +1833,7 @@ opts = {
 }
 
 begin
-  #searches benefits
+  #Retrieves employee benefits
   result = api_instance.get_benefits(xero_tenant_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -1772,7 +1867,7 @@ Name | Type | Description  | Notes
 
 > DeductionObject get_deduction(xero_tenant_id, deduction_id)
 
-retrieve a single deduction by id
+Retrieves a specific deduction by using a unique deduction ID
 
 ### Example
 
@@ -1793,7 +1888,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1802,7 +1897,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 deduction_id = 'deduction_id_example' # String | Identifier for the deduction
 begin
-  #retrieve a single deduction by id
+  #Retrieves a specific deduction by using a unique deduction ID
   result = api_instance.get_deduction(xero_tenant_id, deduction_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -1836,7 +1931,7 @@ Name | Type | Description  | Notes
 
 > Deductions get_deductions(xero_tenant_id, opts)
 
-searches deductions
+Retrieves deductions
 
 ### Example
 
@@ -1857,7 +1952,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1869,7 +1964,7 @@ opts = {
 }
 
 begin
-  #searches deductions
+  #Retrieves deductions
   result = api_instance.get_deductions(xero_tenant_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -1903,7 +1998,7 @@ Name | Type | Description  | Notes
 
 > EarningsOrderObject get_earnings_order(xero_tenant_id, id)
 
-retrieve a single deduction by id
+Retrieves a specific earnings orders by using a unique earnings orders id
 
 ### Example
 
@@ -1924,7 +2019,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -1933,7 +2028,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 id = 'id_example' # String | Identifier for the deduction
 begin
-  #retrieve a single deduction by id
+  #Retrieves a specific earnings orders by using a unique earnings orders id
   result = api_instance.get_earnings_order(xero_tenant_id, id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -1967,7 +2062,7 @@ Name | Type | Description  | Notes
 
 > EarningsOrders get_earnings_orders(xero_tenant_id, opts)
 
-searches earnings orders
+Retrieves earnings orders
 
 ### Example
 
@@ -1988,7 +2083,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2000,7 +2095,7 @@ opts = {
 }
 
 begin
-  #searches earnings orders
+  #Retrieves earnings orders
   result = api_instance.get_earnings_orders(xero_tenant_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2034,7 +2129,7 @@ Name | Type | Description  | Notes
 
 > EarningsRateObject get_earnings_rate(xero_tenant_id, earnings_rate_id)
 
-retrieve a single earnings rates by id
+Retrieves a specific earnings rates by using a unique earnings rate id
 
 ### Example
 
@@ -2055,7 +2150,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2064,7 +2159,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 earnings_rate_id = 'earnings_rate_id_example' # String | Identifier for the earnings rate
 begin
-  #retrieve a single earnings rates by id
+  #Retrieves a specific earnings rates by using a unique earnings rate id
   result = api_instance.get_earnings_rate(xero_tenant_id, earnings_rate_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2098,7 +2193,7 @@ Name | Type | Description  | Notes
 
 > EarningsRates get_earnings_rates(xero_tenant_id, opts)
 
-searches earnings rates
+Retrieves earnings rates
 
 ### Example
 
@@ -2119,7 +2214,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2131,7 +2226,7 @@ opts = {
 }
 
 begin
-  #searches earnings rates
+  #Retrieves earnings rates
   result = api_instance.get_earnings_rates(xero_tenant_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2165,7 +2260,7 @@ Name | Type | Description  | Notes
 
 > EmployeeObject get_employee(xero_tenant_id, employee_id)
 
-searches employees
+Retrieves specific employees by using a unique employee ID
 
 ### Example
 
@@ -2186,7 +2281,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2195,7 +2290,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 begin
-  #searches employees
+  #Retrieves specific employees by using a unique employee ID
   result = api_instance.get_employee(xero_tenant_id, employee_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2229,7 +2324,7 @@ Name | Type | Description  | Notes
 
 > EmployeeLeaveObject get_employee_leave(xero_tenant_id, employee_id, leave_id)
 
-retrieve a single employee leave record
+Retrieves a specific employee's leave record using a unique employee ID
 
 ### Example
 
@@ -2250,7 +2345,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2260,7 +2355,7 @@ xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 leave_id = 'c4be24e5-e840-4c92-9eaa-2d86cd596314' # String | Leave id for single object
 begin
-  #retrieve a single employee leave record
+  #Retrieves a specific employee's leave record using a unique employee ID
   result = api_instance.get_employee_leave(xero_tenant_id, employee_id, leave_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2295,7 +2390,7 @@ Name | Type | Description  | Notes
 
 > EmployeeLeaveBalances get_employee_leave_balances(xero_tenant_id, employee_id)
 
-search employee leave balances
+Retrieves a specific employee's leave balances using a unique employee ID
 
 ### Example
 
@@ -2316,7 +2411,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2325,7 +2420,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 begin
-  #search employee leave balances
+  #Retrieves a specific employee's leave balances using a unique employee ID
   result = api_instance.get_employee_leave_balances(xero_tenant_id, employee_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2359,7 +2454,7 @@ Name | Type | Description  | Notes
 
 > LeavePeriods get_employee_leave_periods(xero_tenant_id, employee_id, opts)
 
-searches employee leave periods
+Retrieves a specific employee's leave periods using a unique employee ID
 
 ### Example
 
@@ -2380,22 +2475,22 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
 
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
-employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
+employee_id = '00000000-0000-0000-0000-000000000000' # String | Employee id for single object
 opts = {
   start_date: Date.parse('2013-10-20'), # Date | Filter by start date
 
-  end_date: Date.parse('Johnson') # Date | Filter by end date
+  end_date: Date.parse('2013-10-20') # Date | Filter by end date
 }
 
 begin
-  #searches employee leave periods
+  #Retrieves a specific employee's leave periods using a unique employee ID
   result = api_instance.get_employee_leave_periods(xero_tenant_id, employee_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2431,7 +2526,7 @@ Name | Type | Description  | Notes
 
 > EmployeeLeaveTypes get_employee_leave_types(xero_tenant_id, employee_id)
 
-searches employee leave types
+Retrieves a specific employee's leave types using a unique employee ID
 
 ### Example
 
@@ -2452,7 +2547,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2461,7 +2556,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 begin
-  #searches employee leave types
+  #Retrieves a specific employee's leave types using a unique employee ID
   result = api_instance.get_employee_leave_types(xero_tenant_id, employee_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2495,7 +2590,7 @@ Name | Type | Description  | Notes
 
 > EmployeeLeaves get_employee_leaves(xero_tenant_id, employee_id)
 
-search employee leave records
+Retrieves a specific employee's leave records using a unique employee ID
 
 ### Example
 
@@ -2516,7 +2611,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2525,7 +2620,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 begin
-  #search employee leave records
+  #Retrieves a specific employee's leave records using a unique employee ID
   result = api_instance.get_employee_leaves(xero_tenant_id, employee_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2559,7 +2654,7 @@ Name | Type | Description  | Notes
 
 > EmployeeOpeningBalancesObject get_employee_opening_balances(xero_tenant_id, employee_id)
 
-retrieve employee openingbalances
+Retrieves a specific employee's openingbalances using a unique employee ID
 
 ### Example
 
@@ -2580,7 +2675,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2589,7 +2684,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 begin
-  #retrieve employee openingbalances
+  #Retrieves a specific employee's openingbalances using a unique employee ID
   result = api_instance.get_employee_opening_balances(xero_tenant_id, employee_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2623,7 +2718,7 @@ Name | Type | Description  | Notes
 
 > EmployeePayTemplateObject get_employee_pay_template(xero_tenant_id, employee_id)
 
-searches employee pay templates
+Retrieves a specific employee pay templates using a unique employee ID
 
 ### Example
 
@@ -2644,7 +2739,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2653,7 +2748,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 begin
-  #searches employee pay templates
+  #Retrieves a specific employee pay templates using a unique employee ID
   result = api_instance.get_employee_pay_template(xero_tenant_id, employee_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2687,7 +2782,7 @@ Name | Type | Description  | Notes
 
 > PaymentMethodObject get_employee_payment_method(xero_tenant_id, employee_id)
 
-retrieves an employee's payment method
+Retrieves a specific employee's payment method using a unique employee ID
 
 ### Example
 
@@ -2708,7 +2803,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2717,7 +2812,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 begin
-  #retrieves an employee's payment method
+  #Retrieves a specific employee's payment method using a unique employee ID
   result = api_instance.get_employee_payment_method(xero_tenant_id, employee_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2751,7 +2846,7 @@ Name | Type | Description  | Notes
 
 > SalaryAndWages get_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wages_id)
 
-get employee salary and wages record by id
+Retrieves a specific salary and wages record for a specific employee using a unique salary and wage id
 
 ### Example
 
@@ -2772,7 +2867,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2782,7 +2877,7 @@ xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 salary_and_wages_id = '3fa85f64-5717-4562-b3fc-2c963f66afa6' # String | Id for single pay template earnings object
 begin
-  #get employee salary and wages record by id
+  #Retrieves a specific salary and wages record for a specific employee using a unique salary and wage id
   result = api_instance.get_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wages_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2817,7 +2912,7 @@ Name | Type | Description  | Notes
 
 > SalaryAndWages get_employee_salary_and_wages(xero_tenant_id, employee_id, opts)
 
-retrieves an employee's salary and wages
+Retrieves a specific employee's salary and wages by using a unique employee ID
 
 ### Example
 
@@ -2838,7 +2933,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2851,7 +2946,7 @@ opts = {
 }
 
 begin
-  #retrieves an employee's salary and wages
+  #Retrieves a specific employee's salary and wages by using a unique employee ID
   result = api_instance.get_employee_salary_and_wages(xero_tenant_id, employee_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2886,7 +2981,7 @@ Name | Type | Description  | Notes
 
 > EmployeeStatutoryLeaveBalanceObject get_employee_statutory_leave_balances(xero_tenant_id, employee_id, opts)
 
-search employee leave balances
+Retrieves a specific employee's leave balances using a unique employee ID
 
 ### Example
 
@@ -2907,7 +3002,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2922,7 +3017,7 @@ opts = {
 }
 
 begin
-  #search employee leave balances
+  #Retrieves a specific employee's leave balances using a unique employee ID
   result = api_instance.get_employee_statutory_leave_balances(xero_tenant_id, employee_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -2958,7 +3053,7 @@ Name | Type | Description  | Notes
 
 > EmployeeStatutorySickLeaveObject get_employee_statutory_sick_leave(xero_tenant_id, statutory_sick_leave_id)
 
-retrieve a statutory sick leave for an employee
+Retrieves a statutory sick leave for an employee
 
 ### Example
 
@@ -2979,7 +3074,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -2988,7 +3083,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 statutory_sick_leave_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Statutory sick leave id for single object
 begin
-  #retrieve a statutory sick leave for an employee
+  #Retrieves a statutory sick leave for an employee
   result = api_instance.get_employee_statutory_sick_leave(xero_tenant_id, statutory_sick_leave_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3022,7 +3117,7 @@ Name | Type | Description  | Notes
 
 > EmployeeTaxObject get_employee_tax(xero_tenant_id, employee_id)
 
-searches tax records for an employee
+Retrieves tax records for a specific employee using a unique employee ID
 
 ### Example
 
@@ -3043,7 +3138,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3052,7 +3147,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 begin
-  #searches tax records for an employee
+  #Retrieves tax records for a specific employee using a unique employee ID
   result = api_instance.get_employee_tax(xero_tenant_id, employee_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3086,7 +3181,7 @@ Name | Type | Description  | Notes
 
 > Employees get_employees(xero_tenant_id, opts)
 
-searches employees
+Retrieves employees
 
 ### Example
 
@@ -3107,7 +3202,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3115,15 +3210,13 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 opts = {
-  first_name: 'John', # String | Filter by first name
+  filter: 'firstName==John,lastName==Smith,isOffPayrollWorker==false', # String | Filter by first name, lastname, and/or whether they are an off-payroll worker
 
-  last_name: 'Johnson', # String | Filter by last name
-
-  page: 56 # Integer | Page number which specifies the set of records to retrieve. By default the number of the records per set is 100.
+  page: 5 # Integer | Page number which specifies the set of records to retrieve. By default the number of the records per set is 100.
 }
 
 begin
-  #searches employees
+  #Retrieves employees
   result = api_instance.get_employees(xero_tenant_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3137,8 +3230,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
- **first_name** | **String**| Filter by first name | [optional] 
- **last_name** | **String**| Filter by last name | [optional] 
+ **filter** | **String**| Filter by first name, lastname, and/or whether they are an off-payroll worker | [optional] 
  **page** | **Integer**| Page number which specifies the set of records to retrieve. By default the number of the records per set is 100. | [optional] 
 
 ### Return type
@@ -3159,7 +3251,7 @@ Name | Type | Description  | Notes
 
 > LeaveTypeObject get_leave_type(xero_tenant_id, leave_type_id)
 
-retrieve a single leave type by id
+Retrieves a specific leave type by using a unique leave type ID
 
 ### Example
 
@@ -3180,7 +3272,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3189,7 +3281,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 leave_type_id = 'leave_type_id_example' # String | Identifier for the leave type
 begin
-  #retrieve a single leave type by id
+  #Retrieves a specific leave type by using a unique leave type ID
   result = api_instance.get_leave_type(xero_tenant_id, leave_type_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3223,7 +3315,7 @@ Name | Type | Description  | Notes
 
 > LeaveTypes get_leave_types(xero_tenant_id, opts)
 
-searches leave types
+Retrieves leave types
 
 ### Example
 
@@ -3244,7 +3336,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3258,7 +3350,7 @@ opts = {
 }
 
 begin
-  #searches leave types
+  #Retrieves leave types
   result = api_instance.get_leave_types(xero_tenant_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3293,7 +3385,7 @@ Name | Type | Description  | Notes
 
 > PayRunObject get_pay_run(xero_tenant_id, pay_run_id)
 
-retrieve a single pay run by id
+Retrieves a specific pay run by using a unique pay run ID
 
 ### Example
 
@@ -3314,7 +3406,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3323,7 +3415,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 pay_run_id = 'pay_run_id_example' # String | Identifier for the pay run
 begin
-  #retrieve a single pay run by id
+  #Retrieves a specific pay run by using a unique pay run ID
   result = api_instance.get_pay_run(xero_tenant_id, pay_run_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3357,7 +3449,7 @@ Name | Type | Description  | Notes
 
 > PayRunCalendarObject get_pay_run_calendar(xero_tenant_id, pay_run_calendar_id)
 
-retrieve a single payrun calendar by id
+Retrieves a specific payrun calendar by using a unique payrun calendar ID
 
 ### Example
 
@@ -3378,7 +3470,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3387,7 +3479,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 pay_run_calendar_id = 'pay_run_calendar_id_example' # String | Identifier for the payrun calendars
 begin
-  #retrieve a single payrun calendar by id
+  #Retrieves a specific payrun calendar by using a unique payrun calendar ID
   result = api_instance.get_pay_run_calendar(xero_tenant_id, pay_run_calendar_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3421,7 +3513,7 @@ Name | Type | Description  | Notes
 
 > PayRunCalendars get_pay_run_calendars(xero_tenant_id, opts)
 
-searches payrun calendars
+Retrieves payrun calendars
 
 ### Example
 
@@ -3442,7 +3534,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3454,7 +3546,7 @@ opts = {
 }
 
 begin
-  #searches payrun calendars
+  #Retrieves payrun calendars
   result = api_instance.get_pay_run_calendars(xero_tenant_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3488,7 +3580,7 @@ Name | Type | Description  | Notes
 
 > PayRuns get_pay_runs(xero_tenant_id, opts)
 
-searches pay runs
+Retrieves pay runs
 
 ### Example
 
@@ -3509,7 +3601,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3523,7 +3615,7 @@ opts = {
 }
 
 begin
-  #searches pay runs
+  #Retrieves pay runs
   result = api_instance.get_pay_runs(xero_tenant_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3558,7 +3650,7 @@ Name | Type | Description  | Notes
 
 > PayslipObject get_pay_slip(xero_tenant_id, payslip_id)
 
-retrieve a single payslip by id
+Retrieves a specific payslip by using a unique payslip ID
 
 ### Example
 
@@ -3579,7 +3671,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3588,7 +3680,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 payslip_id = 'payslip_id_example' # String | Identifier for the payslip
 begin
-  #retrieve a single payslip by id
+  #Retrieves a specific payslip by using a unique payslip ID
   result = api_instance.get_pay_slip(xero_tenant_id, payslip_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3622,7 +3714,7 @@ Name | Type | Description  | Notes
 
 > Payslips get_pay_slips(xero_tenant_id, pay_run_id, opts)
 
-searches payslips
+Retrieves payslips
 
 ### Example
 
@@ -3643,7 +3735,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3656,7 +3748,7 @@ opts = {
 }
 
 begin
-  #searches payslips
+  #Retrieves payslips
   result = api_instance.get_pay_slips(xero_tenant_id, pay_run_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3691,7 +3783,7 @@ Name | Type | Description  | Notes
 
 > ReimbursementObject get_reimbursement(xero_tenant_id, reimbursement_id)
 
-retrieve a single reimbursement by id
+Retrieves a specific reimbursement by using a unique reimbursement id
 
 ### Example
 
@@ -3712,7 +3804,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3721,7 +3813,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 reimbursement_id = 'reimbursement_id_example' # String | Identifier for the reimbursement
 begin
-  #retrieve a single reimbursement by id
+  #Retrieves a specific reimbursement by using a unique reimbursement id
   result = api_instance.get_reimbursement(xero_tenant_id, reimbursement_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3755,7 +3847,7 @@ Name | Type | Description  | Notes
 
 > Reimbursements get_reimbursements(xero_tenant_id, opts)
 
-searches reimbursements
+Retrieves reimbursements
 
 ### Example
 
@@ -3776,7 +3868,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3788,7 +3880,7 @@ opts = {
 }
 
 begin
-  #searches reimbursements
+  #Retrieves reimbursements
   result = api_instance.get_reimbursements(xero_tenant_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3822,7 +3914,7 @@ Name | Type | Description  | Notes
 
 > Settings get_settings(xero_tenant_id)
 
-searches settings
+Retrieves payroll settings
 
 ### Example
 
@@ -3843,7 +3935,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3851,7 +3943,7 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 begin
-  #searches settings
+  #Retrieves payroll settings
   result = api_instance.get_settings(xero_tenant_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3884,7 +3976,7 @@ Name | Type | Description  | Notes
 
 > EmployeeStatutoryLeavesSummaries get_statutory_leave_summary(xero_tenant_id, employee_id, opts)
 
-retrieve a summary of statutory leaves for an employee
+Retrieves a specific employee's summary of statutory leaves using a unique employee ID
 
 ### Example
 
@@ -3905,7 +3997,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3918,7 +4010,7 @@ opts = {
 }
 
 begin
-  #retrieve a summary of statutory leaves for an employee
+  #Retrieves a specific employee's summary of statutory leaves using a unique employee ID
   result = api_instance.get_statutory_leave_summary(xero_tenant_id, employee_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -3953,7 +4045,7 @@ Name | Type | Description  | Notes
 
 > TimesheetObject get_timesheet(xero_tenant_id, timesheet_id)
 
-retrieve a single timesheet by id
+Retrieve a specific timesheet by using a unique timesheet ID
 
 ### Example
 
@@ -3974,7 +4066,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -3983,7 +4075,7 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 timesheet_id = 'timesheet_id_example' # String | Identifier for the timesheet
 begin
-  #retrieve a single timesheet by id
+  #Retrieve a specific timesheet by using a unique timesheet ID
   result = api_instance.get_timesheet(xero_tenant_id, timesheet_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -4017,7 +4109,7 @@ Name | Type | Description  | Notes
 
 > Timesheets get_timesheets(xero_tenant_id, opts)
 
-searches timesheets
+Retrieves timesheets
 
 ### Example
 
@@ -4038,7 +4130,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -4046,15 +4138,21 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 opts = {
-  page: 56, # Integer | Page number which specifies the set of records to retrieve. By default the number of the records per set is 100.
+  page: 5, # Integer | Page number which specifies the set of records to retrieve. By default the number of the records per set is 100.
 
-  employee_id: 'employee_id_example', # String | By default get Timesheets will return the timesheets for all employees in an organization. You can add GET https://…/timesheets?filter=employeeId=={EmployeeId} to get only the timesheets of a particular employee.
+  filter: 'employeeId==00000000-0000-0000-0000-000000000000,payrollCalendarId==00000000-0000-0000-0000-000000000000', # String | Filter by employeeId and/or payrollCalendarId
 
-  payroll_calendar_id: 'payroll_calendar_id_example' # String | By default get Timesheets will return all the timesheets for an organization. You can add GET https://…/timesheets?filter=payrollCalendarId=={PayrollCalendarID} to filter the timesheets by payroll calendar id
+  status: 'Draft', # String | filter results by any timesheets with a matching timesheet status
+
+  start_date: '2019-01-02', # String | filter results by any timesheets with a startDate on or after the provided date
+
+  end_date: '2020-01-02', # String | filter results by any timesheets with a endDate on or before the provided date
+
+  sort: 'startDate' # String | sort the order of timesheets returned. The default is based on the timesheets createdDate, sorted oldest to newest. Currently, the only other option is to reverse the order based on the timesheets startDate, sorted newest to oldest.
 }
 
 begin
-  #searches timesheets
+  #Retrieves timesheets
   result = api_instance.get_timesheets(xero_tenant_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -4069,8 +4167,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **page** | **Integer**| Page number which specifies the set of records to retrieve. By default the number of the records per set is 100. | [optional] 
- **employee_id** | [**String**](.md)| By default get Timesheets will return the timesheets for all employees in an organization. You can add GET https://…/timesheets?filter&#x3D;employeeId&#x3D;&#x3D;{EmployeeId} to get only the timesheets of a particular employee. | [optional] 
- **payroll_calendar_id** | [**String**](.md)| By default get Timesheets will return all the timesheets for an organization. You can add GET https://…/timesheets?filter&#x3D;payrollCalendarId&#x3D;&#x3D;{PayrollCalendarID} to filter the timesheets by payroll calendar id | [optional] 
+ **filter** | **String**| Filter by employeeId and/or payrollCalendarId | [optional] 
+ **status** | **String**| filter results by any timesheets with a matching timesheet status | [optional] 
+ **start_date** | **String**| filter results by any timesheets with a startDate on or after the provided date | [optional] 
+ **end_date** | **String**| filter results by any timesheets with a endDate on or before the provided date | [optional] 
+ **sort** | **String**| sort the order of timesheets returned. The default is based on the timesheets createdDate, sorted oldest to newest. Currently, the only other option is to reverse the order based on the timesheets startDate, sorted newest to oldest. | [optional] 
 
 ### Return type
 
@@ -4090,7 +4191,7 @@ Name | Type | Description  | Notes
 
 > TrackingCategories get_tracking_categories(xero_tenant_id)
 
-searches tracking categories
+Retrieves tracking categories
 
 ### Example
 
@@ -4111,7 +4212,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -4119,7 +4220,7 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 begin
-  #searches tracking categories
+  #Retrieves tracking categories
   result = api_instance.get_tracking_categories(xero_tenant_id)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
@@ -4150,9 +4251,9 @@ Name | Type | Description  | Notes
 
 ## revert_timesheet
 
-> TimesheetObject revert_timesheet(xero_tenant_id, timesheet_id)
+> TimesheetObject revert_timesheet(xero_tenant_id, timesheet_id, opts)
 
-revert a timesheet to draft
+Reverts a specific timesheet to draft
 
 ### Example
 
@@ -4173,7 +4274,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -4181,9 +4282,13 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 timesheet_id = 'timesheet_id_example' # String | Identifier for the timesheet
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #revert a timesheet to draft
-  result = api_instance.revert_timesheet(xero_tenant_id, timesheet_id)
+  #Reverts a specific timesheet to draft
+  result = api_instance.revert_timesheet(xero_tenant_id, timesheet_id, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->revert_timesheet: #{e}"
@@ -4197,6 +4302,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **timesheet_id** | [**String**](.md)| Identifier for the timesheet | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -4214,9 +4320,9 @@ Name | Type | Description  | Notes
 
 ## update_employee
 
-> EmployeeObject update_employee(xero_tenant_id, employee_id, employee)
+> EmployeeObject update_employee(xero_tenant_id, employee_id, employee, opts)
 
-updates employee
+Updates a specific employee's detail
 
 ### Example
 
@@ -4237,7 +4343,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -4245,10 +4351,14 @@ api_instance = xero_client.<api_set>
 
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
-employee = { "title":"Mr", "firstName":"Mike", "lastName":"Johnllsbkrhwopson", "dateOfBirth":"1999-01-01", "address":{ "addressLine1":"101 Green St", "city":"San Francisco", "postCode":"6TGR4F", "country":"UK" }, "email":"84044@starkindustries.com", "gender":"M" } # Employee | 
+employee = { "title": "Mr.", "firstName": "TestDataUK", "lastName": "Tester", "dateOfBirth": "1992-11-22T00:00:00", "gender": "M", "email": "tester@gmail.com", "phoneNumber": "0400123456", "isOffPayrollWorker": false, "address": { "addressLine1": "171 Midsummer", "city": "Milton Keyness", "postCode": "MK9 1EB" } } # Employee | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #updates employee
-  result = api_instance.update_employee(xero_tenant_id, employee_id, employee)
+  #Updates a specific employee's detail
+  result = api_instance.update_employee(xero_tenant_id, employee_id, employee, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->update_employee: #{e}"
@@ -4263,6 +4373,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **employee** | [**Employee**](Employee.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -4280,9 +4391,9 @@ Name | Type | Description  | Notes
 
 ## update_employee_earnings_template
 
-> EarningsTemplateObject update_employee_earnings_template(xero_tenant_id, employee_id, pay_template_earning_id, earnings_template)
+> EarningsTemplateObject update_employee_earnings_template(xero_tenant_id, employee_id, pay_template_earning_id, earnings_template, opts)
 
-updates employee earnings template records
+Updates a specific employee's earnings template records
 
 ### Example
 
@@ -4303,7 +4414,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -4313,9 +4424,13 @@ xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 pay_template_earning_id = '3fa85f64-5717-4562-b3fc-2c963f66afa6' # String | Id for single pay template earnings object
 earnings_template = { "ratePerUnit": 30, "numberOfUnits": 4, "earningsRateID": "87f5b43a-cf51-4b74-92de-94c819e82d27" } # EarningsTemplate | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #updates employee earnings template records
-  result = api_instance.update_employee_earnings_template(xero_tenant_id, employee_id, pay_template_earning_id, earnings_template)
+  #Updates a specific employee's earnings template records
+  result = api_instance.update_employee_earnings_template(xero_tenant_id, employee_id, pay_template_earning_id, earnings_template, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->update_employee_earnings_template: #{e}"
@@ -4331,6 +4446,7 @@ Name | Type | Description  | Notes
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **pay_template_earning_id** | [**String**](.md)| Id for single pay template earnings object | 
  **earnings_template** | [**EarningsTemplate**](EarningsTemplate.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -4348,9 +4464,9 @@ Name | Type | Description  | Notes
 
 ## update_employee_leave
 
-> EmployeeLeaveObject update_employee_leave(xero_tenant_id, employee_id, leave_id, employee_leave)
+> EmployeeLeaveObject update_employee_leave(xero_tenant_id, employee_id, leave_id, employee_leave, opts)
 
-updates employee leave records
+Updates a specific employee's leave records
 
 ### Example
 
@@ -4371,7 +4487,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -4381,9 +4497,13 @@ xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 leave_id = 'c4be24e5-e840-4c92-9eaa-2d86cd596314' # String | Leave id for single object
 employee_leave = { "leaveTypeID": "ed08dffe-788e-4b24-9630-f0fa2f4d164c", "description": "Creating a Description", "startDate": "2020-04-24", "endDate": "2020-04-26", "periods": [ { "periodStartDate": "2020-04-20", "periodEndDate": "2020-04-26", "numberOfUnits": 1, "periodStatus": "Approved" } ] } # EmployeeLeave | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #updates employee leave records
-  result = api_instance.update_employee_leave(xero_tenant_id, employee_id, leave_id, employee_leave)
+  #Updates a specific employee's leave records
+  result = api_instance.update_employee_leave(xero_tenant_id, employee_id, leave_id, employee_leave, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->update_employee_leave: #{e}"
@@ -4399,6 +4519,7 @@ Name | Type | Description  | Notes
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **leave_id** | [**String**](.md)| Leave id for single object | 
  **employee_leave** | [**EmployeeLeave**](EmployeeLeave.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -4416,9 +4537,9 @@ Name | Type | Description  | Notes
 
 ## update_employee_opening_balances
 
-> EmployeeOpeningBalancesObject update_employee_opening_balances(xero_tenant_id, employee_id, employee_opening_balances)
+> EmployeeOpeningBalancesObject update_employee_opening_balances(xero_tenant_id, employee_id, employee_opening_balances, opts)
 
-updates employee opening balances
+Updates a specific employee's opening balances
 
 ### Example
 
@@ -4439,7 +4560,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -4448,9 +4569,13 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 employee_opening_balances = { "statutoryAdoptionPay": 20, "statutoryMaternityPay": 20, "statutoryPaternityPay": 20, "statutorySharedParentalPay": 20, "statutorySickPay": 20, "priorEmployeeNumber": 20 } # EmployeeOpeningBalances | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #updates employee opening balances
-  result = api_instance.update_employee_opening_balances(xero_tenant_id, employee_id, employee_opening_balances)
+  #Updates a specific employee's opening balances
+  result = api_instance.update_employee_opening_balances(xero_tenant_id, employee_id, employee_opening_balances, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->update_employee_opening_balances: #{e}"
@@ -4465,6 +4590,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **employee_opening_balances** | [**EmployeeOpeningBalances**](EmployeeOpeningBalances.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -4482,9 +4608,9 @@ Name | Type | Description  | Notes
 
 ## update_employee_salary_and_wage
 
-> SalaryAndWageObject update_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wages_id, salary_and_wage)
+> SalaryAndWageObject update_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wages_id, salary_and_wage, opts)
 
-updates employee salary and wages record
+Updates salary and wages record for a specific employee
 
 ### Example
 
@@ -4505,7 +4631,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -4515,9 +4641,13 @@ xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # String | Employee id for single object
 salary_and_wages_id = '3fa85f64-5717-4562-b3fc-2c963f66afa6' # String | Id for single pay template earnings object
 salary_and_wage = { "earningsRateID": "87f5b43a-cf51-4b74-92de-94c819e82d27", "numberOfUnitsPerWeek": 3, "ratePerUnit": 11, "effectiveFrom": "2020-05-15", "annualSalary": 101, "status": "ACTIVE", "paymentType": "Salary" } # SalaryAndWage | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #updates employee salary and wages record
-  result = api_instance.update_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wages_id, salary_and_wage)
+  #Updates salary and wages record for a specific employee
+  result = api_instance.update_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wages_id, salary_and_wage, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->update_employee_salary_and_wage: #{e}"
@@ -4533,6 +4663,7 @@ Name | Type | Description  | Notes
  **employee_id** | [**String**](.md)| Employee id for single object | 
  **salary_and_wages_id** | [**String**](.md)| Id for single pay template earnings object | 
  **salary_and_wage** | [**SalaryAndWage**](SalaryAndWage.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -4550,9 +4681,9 @@ Name | Type | Description  | Notes
 
 ## update_pay_run
 
-> PayRunObject update_pay_run(xero_tenant_id, pay_run_id, pay_run)
+> PayRunObject update_pay_run(xero_tenant_id, pay_run_id, pay_run, opts)
 
-update a pay run
+Updates a specific pay run
 
 ### Example
 
@@ -4573,7 +4704,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -4582,9 +4713,13 @@ api_instance = xero_client.<api_set>
 xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 pay_run_id = 'pay_run_id_example' # String | Identifier for the pay run
 pay_run = { "paymentDate": "2020-05-01" } # PayRun | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #update a pay run
-  result = api_instance.update_pay_run(xero_tenant_id, pay_run_id, pay_run)
+  #Updates a specific pay run
+  result = api_instance.update_pay_run(xero_tenant_id, pay_run_id, pay_run, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->update_pay_run: #{e}"
@@ -4599,6 +4734,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **String**| Xero identifier for Tenant | 
  **pay_run_id** | [**String**](.md)| Identifier for the pay run | 
  **pay_run** | [**PayRun**](PayRun.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
@@ -4616,9 +4752,9 @@ Name | Type | Description  | Notes
 
 ## update_timesheet_line
 
-> TimesheetLineObject update_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line_id, timesheet_line)
+> TimesheetLineObject update_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line_id, timesheet_line, opts)
 
-update a timesheet line
+Updates a specific timesheet line for a specific timesheet
 
 ### Example
 
@@ -4639,7 +4775,7 @@ token_set = fetch_valid_token_set(user) # example
 xero_client.refresh_token_set(token_set)
 
 # You need to namespace your api method call to one of the following api sets
-# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api]
+# [:accounting_api, :assets_api, :projects_api, :files_api, :payroll_au_api, :payroll_nz_api, :payroll_uk_api, :app_store_api]
 
 api_instance = xero_client.<api_set>
 
@@ -4649,9 +4785,13 @@ xero_tenant_id = 'xero_tenant_id_example' # String | Xero identifier for Tenant
 timesheet_id = 'timesheet_id_example' # String | Identifier for the timesheet
 timesheet_line_id = 'timesheet_line_id_example' # String | Identifier for the timesheet line
 timesheet_line = { "date": "2020-04-14", "earningsRateID": "87f5b43a-cf51-4b74-92de-94c819e82d27", "numberOfUnits": 2 } # TimesheetLine | 
+opts = {
+  idempotency_key: 'KEY_VALUE' # String | This allows you to safely retry requests without the risk of duplicate processing. 128 character max.
+}
+
 begin
-  #update a timesheet line
-  result = api_instance.update_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line_id, timesheet_line)
+  #Updates a specific timesheet line for a specific timesheet
+  result = api_instance.update_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line_id, timesheet_line, opts)
   p result
 rescue XeroRuby::PayrollUk::ApiError => e
   puts "Exception when calling PayrollUkApi->update_timesheet_line: #{e}"
@@ -4667,6 +4807,7 @@ Name | Type | Description  | Notes
  **timesheet_id** | [**String**](.md)| Identifier for the timesheet | 
  **timesheet_line_id** | [**String**](.md)| Identifier for the timesheet line | 
  **timesheet_line** | [**TimesheetLine**](TimesheetLine.md)|  | 
+ **idempotency_key** | **String**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
 
